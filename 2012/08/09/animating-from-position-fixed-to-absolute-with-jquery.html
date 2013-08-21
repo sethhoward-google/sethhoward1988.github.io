@@ -75,21 +75,24 @@ And thats about it. You most likely will have to do some tinkering with it befor
 <p>Store the element that you’re trying to move into a variable
 Grab the elements current absolute position
 Switch the element from fixed to absolute and apply the current top. This will change but leave the element in the exact same spot, no visible change is noticeable
-Now, animate it back to the beginning or original top
-                var el = $(&#39;#position&#39;);<br>
-                // Get the static position
-                var beginning = el.position();
-                var top = el.css(&#39;top&#39;);</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">            // Turn it to absolute
-            el.css({
-                top:beginning.top - 10,
-                position:&#39;absolute&#39;
-            })
-            // Animate to the proper position
-            el.animate({
-                top: top
-            });
+Now, animate it back to the beginning or original top</p>
+
+<div class="highlight"><pre><code class="javascript">    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#position&#39;</span><span class="p">);</span>  
+    <span class="c1">// Get the static position</span>
+    <span class="kd">var</span> <span class="nx">beginning</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">position</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">);</span>
+    
+    <span class="c1">// Turn it to absolute</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+        <span class="nx">top</span><span class="o">:</span><span class="nx">beginning</span><span class="p">.</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;absolute&#39;</span>
+    <span class="p">})</span>
+    <span class="c1">// Animate to the proper position</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
+        <span class="nx">top</span><span class="o">:</span> <span class="nx">top</span>
+    <span class="p">});</span>
 </code></pre></div>
+
 <p>Demo:</p>
 
 <p>Scroll down in the iframe to see the animate button. Notice that when it’s fixed and you scroll, it stays in the fixed position.</p>
