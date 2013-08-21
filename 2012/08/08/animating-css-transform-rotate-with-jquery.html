@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Animating CSS Transform Rotate with jQuery</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Your New Jekyll Site</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+
+                <h2>Animating CSS Transform Rotate with jQuery</h2>
+<p class="meta">08 Aug 2012</p>
+
+<div class="post">
+<p>Posted on August 8, 2012 by admin
+In a recent project that I’ve been working on, I constantly was needing to rotate divs. My first solution, I created my own animation function that recursively called itself on a given interval, which worked pretty well. However, with this solution, I lost the easing capability that was native to jQuery animations. My one option linear easing wasn’t good enough for me, and I also had to deal with figuring out how often the steps happened and so forth and in the end it worked, but didn’t look nearly as pretty as jQuery has it done. So, instead of reinventing the wheel, I looked through the jQuery animate API and created this solution which now works perfectly.</p>
+
+<p>Here are the scripts that I used to accomplish this.</p>
+
+<p>First thing to do, create a dummy element that will temporarily store the information we need. I created the following:</p>
+
+<p><div id="degree_holder">Dummy Div<div>
+Now, we also need the div we are trying to manipulate.</p>
+
+<p><div id="rotate">Rotate Me!<div>
+We have our HTML setup, so let’s add the javascript, here are a few steps that explain the process.</p>
+
+<p>We need to know what the start and ending degrees are for the rotation. In this example, we are going to use 90 to start with and end at 180 degrees.
+Set our starting degree as the margin-top for our dummy div
+Animate the margin-top property to our ending value
+On each step, pass a function that will change the rotation value of our rotate div. The ‘now’ parameter that jQuery provides us with is the value at which the animation should be for that given point in time. Change the css transform value for our rotate div to the ‘now’ value.
+Check out the example below to see each step of the process.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$(&#39;#degree_holder&#39;).css(&#39;margin-top&#39;,90);
+$(&#39;#degree_holder&#39;).animate({
+    &#39;marginTop&#39; : 180
+},{
+    duration:750,
+    step: function(now, fx) {
+        $(&#39;#rotate&#39;).css(&#39;transform&#39;,&#39;rotate(&#39; + now + &#39;deg)&#39;);
+    }
+});
+</code></pre></div>
+<p>So, we are theoretically animating the margin-top of our dummy div, but at each step along the way, we are rotating the div to the position of that step. By doing this, we are taking advantage of the easing properties and letting jQuery handle all the work.</p>
+
+<p>Demo:</p>
+
+<p>Dummy Div
+Rotate Me!</p>
+
+<p>In reality, you probably don’t want your dummy div to show or alter the margins of the page, so you should give it a display:none.</p>
+
+<p>To make life easier on you, go use the animate/rotate jQuery plugin available by zachstronaut, which will properly apply your .css(‘transform’) with the proper prefix depending on the browser. (My example above DEPENDS on this inclusion, so if you just straight copy and paste without it, it won’t work like expected).</p>
+
+<p>Now that you’ve seen this example, you can see how this could apply to other animations that jQuery doesn’t support. Let me know of any other interesting animations you use this technique for!</p>
+
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Your Name<br />
+                  What You Are<br />
+                  your@email.com
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
+                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>
