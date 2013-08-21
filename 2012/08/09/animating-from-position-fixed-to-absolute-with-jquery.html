@@ -41,33 +41,35 @@ Switch the visibility and position back to it’s original state
 Do a normal jQuery animate to where the final end is going to be, using our end position object as our point of reference
 When the animation completes, switch the element completely to position:fixed
 And thats about it. You most likely will have to do some tinkering with it before it’s perfect and account for various factors such as margins and paddings that might affect where the div ends up when switching from absolute to fixed and vice versa. But, this example will help get you going. Note: the -10 in this example is the margin-top of the body.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">            //From absolute to fixed
-            var el = $(&#39;#position&#39;);   
-            el.css({
-                visibility:&#39;hidden&#39;,
-                position:&#39;fixed&#39;
-            })
 
-            // Get the static position
-            var end = el.position();
-            var top = el.css(&#39;top&#39;);
+<div class="highlight"><pre><code class="javascript">    <span class="c1">//From absolute to fixed</span>
+    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#position&#39;</span><span class="p">);</span>   
+    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+        <span class="nx">visibility</span><span class="o">:</span><span class="s1">&#39;hidden&#39;</span><span class="p">,</span>
+        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;fixed&#39;</span>
+    <span class="p">})</span>
 
-            // Turn it back to absolute
-            el.css({
-                visibility:&#39;visible&#39;,
-                position:&#39;absolute&#39;
-            })
+    <span class="c1">// Get the static position</span>
+    <span class="kd">var</span> <span class="nx">end</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">position</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">);</span>
 
-            // Animate to the static position
-            el.animate({ 
-                top: end.top - 10
-            },function(){
-                el.css({
-                    position:&#39;fixed&#39;,
-                    top:top
-                }).text(&#39;Current Div Position: Fixed&#39;)
-            });
+    <span class="c1">// Turn it back to absolute</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+        <span class="nx">visibility</span><span class="o">:</span><span class="s1">&#39;visible&#39;</span><span class="p">,</span>
+        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;absolute&#39;</span>
+    <span class="p">})</span>
+
+    <span class="c1">// Animate to the static position</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span> 
+        <span class="nx">top</span><span class="o">:</span> <span class="nx">end</span><span class="p">.</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">10</span>
+    <span class="p">},</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+            <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span>
+            <span class="nx">top</span><span class="o">:</span><span class="nx">top</span>
+        <span class="p">}).</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Current Div Position: Fixed&#39;</span><span class="p">)</span>
+    <span class="p">});</span>
 </code></pre></div>
+
 <p>For this one, we are going to animate from fixed to an absolute state. The theory is slightly different</p>
 
 <p>Store the element that you’re trying to move into a variable
