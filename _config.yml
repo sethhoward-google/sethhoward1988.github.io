@@ -1,0 +1,5 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+source:      ~/Workspace/jekyll-home
+destination: ~/Workspace/sethhoward1988.github.io
