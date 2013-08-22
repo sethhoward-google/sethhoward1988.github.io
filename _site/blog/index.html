@@ -39,232 +39,59 @@
         </div>  
         <div class="header-outter-color"></div>
         <div class="container">
-	<h1>Blog Posts</h1>
-	<ul class="posts">
+	<h3>Blog Posts</h3>
+	<div class="posts">
 		
-		  <li><span>20 Aug 2013</span> &raquo; <a href="/2013/08/20/test.html">Test Something Here</a></li>
-		  <h1>TEST</h1>
-
-<p>sadfjsklafjlsk</p>
-
+			<a href="/2013/08/21/javascript-module-pattern.html"><h2>The Module Pattern</h2></a>
+		  	<div class="post-date">21 Aug 2013</div>
+			<div class="post">
+			  	The idea of this pattern is to create variables that are completely private from the global scope. In the example below, we see that the countervariable cannot be directly accessed. The only way the variable can be manipulated is through the defined methods that the module returns...
+			</div>
 		
-		  <li><span>25 Jun 2013</span> &raquo; <a href="/2013/06/25/how-slow-browser-adoption-hurts.html">How Slow Browser Adoption Hurts</a></li>
-		  <p>One of the issues that not only PepsiCo faces, but corporations around the world, is browser adoption. At the rate technology increases, stable browser updates are being released on a monthly basis, with developer versions and nightly builds being released daily and weekly. Clearly, the technology community is pushing web browsing ever farther into the future.</p>
-
-<p>So, where does this put us? When IE6 came out it revolutionized the web. It introduced several new features, a reworked user interface, and support for many of microsoft’s products. It received the highest adoption that any browser has ever received. Therefore, our developers began writing software for IE6. After some time, Microsoft released IE7, and IE8, Firefox was introduced, Apple released Safari, the Webkit engine became supported by Apple and Google and Chrome was released. Opera continues to have a marginal share, and just recently Google announced leaving Webkit and developing Blink, which was forked from Webkit. Scalable Vector Graphics replaced IE’s RVML and now with the introduction of HTML 5 we see ever dwindling numbers of Flash-based applications and much more use of the canvas element for rendering visual heavy web applications and games.</p>
-
-<p>How can a company possibly expect to keep up with this kind of technology? The answer that I have seen is simple. Forward thinking. Too often are we concerned with, is our software backward compatible. What we should be concerned with, is our software forward compatible. Why would I write software today that is geared towards IE8? Developers need to focus on writing software that works with the latest technology always. When a new browser rolls out, QA should be testing our software in that browser as well as the current major release that we are using. This will much more freely allow PepsiCo and other coporations to adopt newer browsers.</p>
-
-<p>Aside from this, it allows PepsiCo to take advantage of the web. The reason new browsers are being released is because new technology in being introduced. When we stick with IE8 instead of moving forward, in the long run we hurt ourselves because we can’t leverage the new features of the web while the competition can. We can’t leverage the canvas element. We are forever stuck in our rut of Java applications and JSPs when the modern web and technology community has moved far beyond that. What we should be doing is always adapting our code to work in the latest browsers as well as the current major release. I know this is possible because as a software developer for the past several years I have had to write code that functions not only in Chrome and Safari, but also IE6, 7, 8, and 9. We don’t necessarily need to support IE6 because we’re past that now. But, test our code in Chrome and IE9 and 10 because eventually that’s the platform we want to move to. It may cost slightly more now to make sure our code works everywhere, but its better to pay this price incrementally rather than hit a wall and spend time overhauling every application and every piece of software in order to bring our code up to speed with the web. If we work incrementally on each piece of software that we write, we enable ourselves to leverage new technology and pay the price of updating software over a longer period of time. This is much more effective than hitting a wall and firefighting our way past it in order to update to IE10.</p>
-
-<p>This is our code. What about our vendors? Vendors may or may not support the latest browser, but as a customer, you can demand that they do so. As a large corporation, we have sufficient leverage against these corporations to update. Although we may not be able to force them to move, this is less of an issue.</p>
-
-<p>The most important thing is that we keep ourselves up to date and take advantage of new technology that can put us one step ahead of the competition</p>
-
+			<a href="/2013/08/21/javascript-constructor-patterns.html"><h2>The Constructor Pattern</h2></a>
+		  	<div class="post-date">21 Aug 2013</div>
+			<div class="post">
+			  	The constructor pattern is used for creating new objects. The two most common ways of creating a new object are cited below...
+			</div>
 		
-		  <li><span>20 Jun 2013</span> &raquo; <a href="/2013/06/20/leveraging-the-client.html">Leveraging the Client</a></li>
-		  <p>It often time occurs that web developers need to display time on a web application. Whether that time be the server time, the current time to the user, the time in New York, etc. For all these functions, how can we come up with a cross browser compatible solution of not only outputting the right time, but also receiving the right time from the user in the format that we want it in. There are several different ways to go about this.</p>
-
-<p>Way #1) Let the Server Handle It</p>
-
-<p>When the data gets output or data received, let the server deal with parsing the time to the correct format, validating it, and ensuring that it is compatible with the system.</p>
-
-<p>Way # 2) Let the Client Handle It</p>
-
-<p>Write some JavaScript to sanitize the input before it ever makes it to the server</p>
-
-<p>Way # 3) Server and Client Side Handling</p>
-
-<p>Throw some validation down on the client, but have the server also check it to make sure that it’s valid.</p>
-
-<p>The proper answer, <em>ahem</em>, the answer that I would go with, is clearly # 3. Firstly, a goal of all web developers should be to make robust web apps that work, and are lightweight. No one wants their browser bogged down with a sluggish page or application. Client side browsers are becoming ever more powerful and capable of processing enormous amounts without the browser even flinching. With this new development, many developers are offloading a large portion of logic onto the client, and off from the server. This is why a RESTful concept is becoming increasingly more popular. The client handles the logic, the server simply handles reads and writes, sends the raw data to the client who then parses it and displays it properly. The other idea behind REST is that one server for all of them. That is, one server can handle requests from an iPhone, Android, iOS, Windows Phone, and even Blackberry if we wanted.</p>
-
-<p>Server validation is also important. Any web application needs basic security measures and man in the middle attacks and proxy attacks are out there, so we can’t blindly trust the data that comes from the client. Therefore, basic security needs to be issued on the server. That being said, the client should handle the majority of the logic. There are numerous libraries out there for time, such as datejs or momentjs, and they can parse time into essentially any format you want as well as display it in any format that you can think of. By using these libraries and setting everything to UTC time format, there will never arise issues of time between time zones, countries, continents, etc. The clients read the system time and offset given to them from the browser, and the javascript code can parse it to the correct time zone then display it. Likewise, if the user says he wants a reminder at 10:00 AM his time, the javascript can parse his response, transform it to our server time, store it, then chron jobs running on the server will now when to shoot out that reminder because its set to the standard time that the server is running on.</p>
-
-<p>The reason why we don’t use the server validation as is popular in older java frameworks and even new ones, is that this burdens the server with doing basic validation that every client device can handle itself. Why make the server a) validate the stuff, b) determine that it’s wrong, c) reparse new html d) redirect the browser and send over the new html. That seems like several steps that aren’t needed. The client can validate the stuff, and see an issue that the user can correct before ever even issuing an ajax request or http request, or talking with the java servlet. You see, that’s smart. Every user has their own machine with their own processing chip. If we leverage that processing power, we can dramatically decrease our server needs, and still have a peppy web application.</p>
-
-<p>The key here, is leverage the client. It is powerful.</p>
-
+			<a href="/2013/06/25/how-slow-browser-adoption-hurts.html"><h2>How Slow Browser Adoption Hurts</h2></a>
+		  	<div class="post-date">25 Jun 2013</div>
+			<div class="post">
+			  	One of the issues that not only PepsiCo faces, but corporations around the world, is browser adoption. At the rate technology increases, stable browser updates are being released on a monthly basis, with developer versions and nightly builds being released daily and weekly. Clearly, the technology community is pushing web browsing ever farther into the future...
+			</div>
 		
-		  <li><span>05 Dec 2012</span> &raquo; <a href="/2012/12/05/judge-a-company-by-its-website.html">Judge a Company By Its Website</a></li>
-		  <p>Judge a Company By Its Website</p>
-
-<p>I’ve worked for several companies now, and worked on several web projects. There are a plethora of web tools out there now for people to build sleek websites. I have found thus far that the quality of a company can almost directly be correlated to the quality of their web presence. A few things that I look for when judging whether a company is trustworthy, by means of the website, are below.</p>
-
-<p>WordPress or Drupal?</p>
-
-<p>Many companies will choose to use a WordPress or Drupal installation to get their website going. And honestly, it’s not a bad move. It’s a quick way to get a great looking website online fast. It gives you access to tons of templates, a great way for non-technical folk to edit content as well as online store options. If the company is using wordpress or drupal, then here is my take on it.</p>
-
-<p>It’s a non-technical company – They’re using pre-made templates and easy editing to stay away from having to get down and dirty with the code. That’s great. Unless you’re a technical company selling your product on a wordpress. In that case, you might want to think twice before engaging in business with them.</p>
-
-<p>It’s not a well-established company – Clearly they don’t have the funds to be making their own website, hence, they rely on these frameworks to deliver their content.</p>
-
-<p>HOWEVER - Many companies get wordpress and PHP developers to build their site; this is fine. They are building on top of a reliable product. If the website is so well done that you can’t tell if it’s a wordpress or not, then that means they’re pretty credible. But if the first words you read are “Just another wordpress”, get out. Fast.</p>
-
-<p>So, if the company you’re looking to get involved with is still a growing company or non-technical, I would say that you’re OK taking a deeper look. But, if they are a technical company, or a supposed industry leading company, I would back out.</p>
-
-<p>In House Website</p>
-
-<p>Now we’re talking. The company grew a pair and forked out money to have someone develop a website for them, or they have given precious developer time to work on their website. This is a good step in the right direction. Now, the only things that we need to look at are below.</p>
-
-<p>Quality – Just how well done is the website? If you are paying really close attention to detail, do you see mismatching colors? mismatching font sizes? things not aligning properly? weird website effects? odd color combinations? Does anything on their website hurt your eyes? Are any pictures oddly placed or have too much going on? Websites are art, and a company that is not paying attention to small details, certainly isn’t going to pay attention to the details when it comes to you. Their website is their presentation. I can guarantee you that their product will be no better than their website.</p>
-
-<p>About Page - Lastly, another key indicator in my bucket, is the about page. When searching, look at how much effort the company puts at sharing the credit with all their employees, or just management.</p>
-
-<p>Let’s take a look…</p>
-
-<p>This being said, let’s look at a few companies that have gotten it right, as well as a few companies that haven’t.</p>
-
-<p>Ones that got it right</p>
-
-<p>whitehouse.gov - Believe it or not, at the core of our nation’s website is a Drupal installation. However, this website is so well crafted that it would take you a very long time to see anything that remotely resembles Drupal. The telltale signs of Drupal are gone, such as certain .txt files. Remember, not a technical company, so they’re doing just fine.</p>
-
-<p>square.com – A beautifully crafted website. This tech giant has spent a very large amount of time designing every aspect of their website. From the subtle picture transitions, to the general warm feeling that the site gives you, it’s clear that they’ve invested lots of effort into impressing you with the first thing you see.</p>
-
-<p>I know what you’re thinking, these are big names with deep pockets. Let’s look at some small startups here in Utah valley and see what we find.</p>
-
-<p>lucidchart.com – A startup company that also tells the signs of success. It’s plain, nothing in misalignment and so forth. They too have put effort into their website to impress you.</p>
-
-<p>bluelemon.com – A budding restaurant that also has blasted the web with a great site. With a site of this quality, I don’t think I would have a problem sitting down and dining with them.</p>
-
-<p>And now, the bad…</p>
-
-<p>naxum.com - This website looks terrible. The way the front page oddly cycles through their clients. The giant phone number at the top beckoning you to call, the large text and life sized buttons. There is nothing subtle about this page, they’re shoving it in your face. I would steer clear.</p>
-
-<p>mokimobility.com – Another poor example of a website that is filled with bugs and poor design. When hovering over the buttons at the top, the title has a white background. How certain things don’t align properly throughout the site, and how the effects are very linear. The site is too busy and incorporates poor color choices.</p>
-
-<p>krissnik.com - This site seems like a poor attempt to reel in the stupid consumer. It’s poor color choice is hard to read, has a sales pitch directly on their front page, cheesy pictures, and even has left-over templating text in it, like “need some content here…”. Would definitely steer clear of this company. Contrast this with a dark-themed page done… well better, but not perfect: Lime Marketing.</p>
-
-<p>Conclusion</p>
-
-<p>There you go. There are several well-done websites and several poorly done. Look deep into the website before approaching a company, it will dictate a lot about how they treat you and how much they care about their business. Great websites are not easy to make and require an exhaustive amount of effort and money. Anyone who’s not willing to make that happen is not worthy of your business.</p>
-
-<p>Don’t become just another client, become a valued partner. Choose wisely, and when it comes to companies, I will go as far as to say, you can judge a company by its website.</p>
-
+			<a href="/2013/06/20/leveraging-the-client.html"><h2>Leveraging the Client</h2></a>
+		  	<div class="post-date">20 Jun 2013</div>
+			<div class="post">
+			  	It often time occurs that web developers need to display time on a web application. Whether that time be the server time, the current time to the user, the time in New York, etc. For all these functions, how can we come up with a cross browser compatible solution of not only outputting the right time, but also receiving the right time from the user in the format that we want it in. There are several different ways to go about this...
+			</div>
 		
-		  <li><span>09 Aug 2012</span> &raquo; <a href="/2012/08/09/animating-from-position-fixed-to-absolute-with-jquery.html">Animating from Position Fixed to Absolute with jQuery</a></li>
-		  <p>Animating from Position Fixed to Absolute with jQuery</p>
-
-<p>Another post on jQuery animations!</p>
-
-<p>This was another challenge faced when creating my website. If you go there, you will notice that the navigation column is normally fixed (most noticeable when on the portfolio page), but then on the design page I wanted to use the entire width of the page, but didn’t want my navigation to float on top of the content. So, I had to figure out how to animate it from fixed to absolute smoothly and back again. The following example demonstrates how we can move the element from an absolute position to a fixed position.</p>
-
-<p>Here’s the theory behind what needs to happen.</p>
-
-<p>Store the element that you’re trying to move into a variable
-Briefly change the element to visibility:none and to the desired position, in this example, to position:fixed
-Grab the position of your now invisible element and store it into a variable
-Switch the visibility and position back to it’s original state
-Do a normal jQuery animate to where the final end is going to be, using our end position object as our point of reference
-When the animation completes, switch the element completely to position:fixed
-And thats about it. You most likely will have to do some tinkering with it before it’s perfect and account for various factors such as margins and paddings that might affect where the div ends up when switching from absolute to fixed and vice versa. But, this example will help get you going. Note: the -10 in this example is the margin-top of the body.</p>
-
-<div class="highlight"><pre><code class="javascript">    <span class="c1">//From absolute to fixed</span>
-    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#position&#39;</span><span class="p">);</span>   
-    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-        <span class="nx">visibility</span><span class="o">:</span><span class="s1">&#39;hidden&#39;</span><span class="p">,</span>
-        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;fixed&#39;</span>
-    <span class="p">})</span>
-
-    <span class="c1">// Get the static position</span>
-    <span class="kd">var</span> <span class="nx">end</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">position</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">);</span>
-
-    <span class="c1">// Turn it back to absolute</span>
-    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-        <span class="nx">visibility</span><span class="o">:</span><span class="s1">&#39;visible&#39;</span><span class="p">,</span>
-        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;absolute&#39;</span>
-    <span class="p">})</span>
-
-    <span class="c1">// Animate to the static position</span>
-    <span class="nx">el</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span> 
-        <span class="nx">top</span><span class="o">:</span> <span class="nx">end</span><span class="p">.</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">10</span>
-    <span class="p">},</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-            <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span>
-            <span class="nx">top</span><span class="o">:</span><span class="nx">top</span>
-        <span class="p">}).</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Current Div Position: Fixed&#39;</span><span class="p">)</span>
-    <span class="p">});</span>
-</code></pre></div>
-
-<p>For this one, we are going to animate from fixed to an absolute state. The theory is slightly different</p>
-
-<p>Store the element that you’re trying to move into a variable
-Grab the elements current absolute position
-Switch the element from fixed to absolute and apply the current top. This will change but leave the element in the exact same spot, no visible change is noticeable
-Now, animate it back to the beginning or original top</p>
-
-<div class="highlight"><pre><code class="javascript">    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#position&#39;</span><span class="p">);</span>  
-    <span class="c1">// Get the static position</span>
-    <span class="kd">var</span> <span class="nx">beginning</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">position</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">);</span>
-    
-    <span class="c1">// Turn it to absolute</span>
-    <span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-        <span class="nx">top</span><span class="o">:</span><span class="nx">beginning</span><span class="p">.</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;absolute&#39;</span>
-    <span class="p">})</span>
-    <span class="c1">// Animate to the proper position</span>
-    <span class="nx">el</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
-        <span class="nx">top</span><span class="o">:</span> <span class="nx">top</span>
-    <span class="p">});</span>
-</code></pre></div>
-
-<p>Demo:</p>
-
-<p>Scroll down in the iframe to see the animate button. Notice that when it’s fixed and you scroll, it stays in the fixed position.</p>
-
+			<a href="/2012/12/05/judge-a-company-by-its-website.html"><h2>Judge a Company By Its Website</h2></a>
+		  	<div class="post-date">05 Dec 2012</div>
+			<div class="post">
+			  	I’ve worked for several companies now, and worked on several web projects. There are a plethora of web tools out there now for people to build sleek websites. I have found thus far that the quality of a company can almost directly be correlated to the quality of their web presence. A few things that I look for when judging whether a company is trustworthy, by means of the website, are below...
+			</div>
 		
-		  <li><span>08 Aug 2012</span> &raquo; <a href="/2012/08/08/animating-css-transform-rotate-with-jquery.html">Animating CSS Transform Rotate with jQuery</a></li>
-		  <p>Posted on August 8, 2012 by admin
-In a recent project that I’ve been working on, I constantly was needing to rotate divs. My first solution, I created my own animation function that recursively called itself on a given interval, which worked pretty well. However, with this solution, I lost the easing capability that was native to jQuery animations. My one option linear easing wasn’t good enough for me, and I also had to deal with figuring out how often the steps happened and so forth and in the end it worked, but didn’t look nearly as pretty as jQuery has it done. So, instead of reinventing the wheel, I looked through the jQuery animate API and created this solution which now works perfectly.</p>
-
-<p>Here are the scripts that I used to accomplish this.</p>
-
-<p>First thing to do, create a dummy element that will temporarily store the information we need. I created the following:</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;degree_holder&quot;</span><span class="nt">&gt;</span>Dummy Div<span class="nt">&lt;div&gt;</span>
-</code></pre></div>
-
-<p>Now, we also need the div we are trying to manipulate.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;rotate&quot;</span><span class="nt">&gt;</span>Rotate Me!<span class="nt">&lt;div&gt;</span>
-</code></pre></div>
-
-<p>We have our HTML setup, so let’s add the javascript, here are a few steps that explain the process.</p>
-
-<p>We need to know what the start and ending degrees are for the rotation. In this example, we are going to use 90 to start with and end at 180 degrees.
-Set our starting degree as the margin-top for our dummy div
-Animate the margin-top property to our ending value
-On each step, pass a function that will change the rotation value of our rotate div. The ‘now’ parameter that jQuery provides us with is the value at which the animation should be for that given point in time. Change the css transform value for our rotate div to the ‘now’ value.
-Check out the example below to see each step of the process.</p>
-
-<div class="highlight"><pre><code class="javascript">    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#degree_holder&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;margin-top&#39;</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#degree_holder&#39;</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
-        <span class="s1">&#39;marginTop&#39;</span> <span class="o">:</span> <span class="mi">180</span>
-    <span class="p">},{</span>
-        <span class="nx">duration</span><span class="o">:</span><span class="mi">750</span><span class="p">,</span>
-        <span class="nx">step</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">fx</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#rotate&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">,</span><span class="s1">&#39;rotate(&#39;</span> <span class="o">+</span> <span class="nx">now</span> <span class="o">+</span> <span class="s1">&#39;deg)&#39;</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
-</code></pre></div>
-
-<p>So, we are theoretically animating the margin-top of our dummy div, but at each step along the way, we are rotating the div to the position of that step. By doing this, we are taking advantage of the easing properties and letting jQuery handle all the work.</p>
-
-<p>Demo:</p>
-
-<p>Dummy Div
-Rotate Me!</p>
-
-<p>In reality, you probably don’t want your dummy div to show or alter the margins of the page, so you should give it a display:none.</p>
-
-<p>To make life easier on you, go use the animate/rotate jQuery plugin available by zachstronaut, which will properly apply your .css(‘transform’) with the proper prefix depending on the browser. (My example above DEPENDS on this inclusion, so if you just straight copy and paste without it, it won’t work like expected).</p>
-
-<p>Now that you’ve seen this example, you can see how this could apply to other animations that jQuery doesn’t support. Let me know of any other interesting animations you use this technique for!</p>
-
+			<a href="/2012/08/09/animating-from-position-fixed-to-absolute-with-jquery.html"><h2>Animating from Position Fixed to Absolute with jQuery</h2></a>
+		  	<div class="post-date">09 Aug 2012</div>
+			<div class="post">
+			  	This was another challenge faced when creating my website. If you go there, you will notice that the navigation column is normally fixed (most noticeable when on the portfolio page), but then on the design page I wanted to use the entire width of the page, but didn’t want my navigation to float on top of the content. So, I had to figure out how to animate it from fixed to absolute smoothly and back again. The following example demonstrates how we can move the element from an absolute position to a fixed position...
+			</div>
 		
-	</ul>
+			<a href="/2012/08/08/animating-css-transform-rotate-with-jquery.html"><h2>Animating CSS Transform Rotate with jQuery</h2></a>
+		  	<div class="post-date">08 Aug 2012</div>
+			<div class="post">
+			  	In a recent project that I’ve been working on, I constantly was needing to rotate divs. My first solution, I created my own animation function that recursively called itself on a given interval, which worked pretty well. However, with this solution, I lost the easing capability that was native to jQuery animations. My one option linear easing wasn’t good enough for me, and I also had to deal with figuring out how often the steps happened and so forth and in the end it worked, but didn’t look nearly as pretty as jQuery has it done. So, instead of reinventing the wheel, I looked through the jQuery animate API and created this solution which now works perfectly...
+			</div>
+		
+	</div>
+
+	<!-- Pagination links -->
+	<div class="pagination">
+	  
+	  <span class="page_number ">Page: 1 of 1</span>
+	  
+	</div>
 </div>
       </div>
       <div id="footer">

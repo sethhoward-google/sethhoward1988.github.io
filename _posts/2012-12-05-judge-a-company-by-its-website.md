@@ -3,6 +3,7 @@ layout: post
 title:  "Judge a Company By Its Website"
 date:   2012-12-05 13:39:31
 categories: 
+snippet: I’ve worked for several companies now, and worked on several web projects. There are a plethora of web tools out there now for people to build sleek websites. I have found thus far that the quality of a company can almost directly be correlated to the quality of their web presence. A few things that I look for when judging whether a company is trustworthy, by means of the website, are below...
 ---
 
 Judge a Company By Its Website

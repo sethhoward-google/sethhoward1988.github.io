@@ -3,6 +3,7 @@ layout: post
 title:  "How Slow Browser Adoption Hurts"
 date:   2013-06-25 13:39:31
 categories: 
+snippet: One of the issues that not only PepsiCo faces, but corporations around the world, is browser adoption. At the rate technology increases, stable browser updates are being released on a monthly basis, with developer versions and nightly builds being released daily and weekly. Clearly, the technology community is pushing web browsing ever farther into the future...
 ---
 
 One of the issues that not only PepsiCo faces, but corporations around the world, is browser adoption. At the rate technology increases, stable browser updates are being released on a monthly basis, with developer versions and nightly builds being released daily and weekly. Clearly, the technology community is pushing web browsing ever farther into the future.

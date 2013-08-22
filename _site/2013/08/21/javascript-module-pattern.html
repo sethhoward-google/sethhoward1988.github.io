@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Module Pattern</title>
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Compiled CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- Script -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+    </head>
+    <body>
+      <div id="wrap">
+        <div class="navbar-color">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Seth Miles Howard</a>
+            </div>
+            <div class="collapse navbar-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li data-page-title="Me"><a href="/me">Me</a></li>
+                <li data-page-title="Portfolio"><a href="/portfolio">Portfolio</a></li>
+                <li data-page-title="Blog"><a href="/blog">Blog</a></li>
+                <li data-page-title="Talk to Me"><a href="/talk">Talk to Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+        <div class="header-outter-color"></div>
+        <div class="container">
+	<h2>The Module Pattern</h2>
+	<p class="meta">21 Aug 2013</p>
+
+	<div class="post">
+	<h1>Module Pattern</h1>
+
+<p>The idea of this pattern is to create variables that are completely private
+from the global scope. In the example below, we see that the countervariable
+cannot be directly accessed. The only way the variable can be manipulated is
+through the defined methods that the module returns.</p>
+
+<p>The counters value is preserved through a closure.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">myModule</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    
+    <span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+
+        <span class="nx">incrementCounter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">counter</span><span class="o">++</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Current counter is &#39;</span> <span class="o">+</span> <span class="nx">counter</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="nx">decrementCounter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">counter</span><span class="o">--</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Current counter is &#39;</span> <span class="o">+</span> <span class="nx">counter</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="nx">getCounter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">counter</span><span class="p">;</span>
+        <span class="p">},</span>
+
+        <span class="nx">setCounter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">newCounter</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">counter</span> <span class="o">=</span> <span class="nx">newCounter</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">})();</span>
+</code></pre></div>
+
+	</div>
+</div>
+
+      </div>
+      <div id="footer">
+        <div class="outter-color"></div>
+        <div class="container">
+          <ul>
+            <li><a href="/me">Me</a></li>|
+            <li><a href="/portfolio">Portfolio</a></li>|
+            <li><a href="/blog">Blog</a></li>|
+            <li><a href="/talk">Talk to Me</a></li>            
+          </ul>
+          <div class="social">
+            <a href="https://github.com/sethhoward1988"><div class="github"></div></a>
+            <a href="https://twitter.com/sethhoward22"><div class="twitter"></div></a>
+            <a href=""><div class="linkedin"></div></a>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

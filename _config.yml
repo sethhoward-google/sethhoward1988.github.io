@@ -1,3 +1,5 @@
 name: Seth Miles Howard
 markdown: redcarpet
 pygments: true
+paginate: 8
+paginate_path: "blog/page:num"

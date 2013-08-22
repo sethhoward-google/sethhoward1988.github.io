@@ -24,16 +24,22 @@
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 20, ../sass/home.scss */
+/* line 21, ../sass/home.scss */
+#carousel .carousel-caption h1 {
+  font-size: 45px;
+}
+/* line 26, ../sass/home.scss */
 #carousel .item1 {
   background-image: url("img/stopwatch.png");
 }
-/* line 24, ../sass/home.scss */
+/* line 30, ../sass/home.scss */
 #carousel .item2 {
   background-image: url("img/technical.png");
 }
-/* line 28, ../sass/home.scss */
+/* line 34, ../sass/home.scss */
 #carousel .item3 {
   background-image: url("img/sethChlo.png");
 }

@@ -3,6 +3,7 @@ layout: post
 title:  "Animating from Position Fixed to Absolute with jQuery"
 date:   2012-08-09 13:39:31
 categories: 
+snippet: This was another challenge faced when creating my website. If you go there, you will notice that the navigation column is normally fixed (most noticeable when on the portfolio page), but then on the design page I wanted to use the entire width of the page, but didn’t want my navigation to float on top of the content. So, I had to figure out how to animate it from fixed to absolute smoothly and back again. The following example demonstrates how we can move the element from an absolute position to a fixed position...
 ---
 
 Animating from Position Fixed to Absolute with jQuery

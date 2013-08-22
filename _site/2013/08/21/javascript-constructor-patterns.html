@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Constructor Pattern</title>
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Compiled CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- Script -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+    </head>
+    <body>
+      <div id="wrap">
+        <div class="navbar-color">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Seth Miles Howard</a>
+            </div>
+            <div class="collapse navbar-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li data-page-title="Me"><a href="/me">Me</a></li>
+                <li data-page-title="Portfolio"><a href="/portfolio">Portfolio</a></li>
+                <li data-page-title="Blog"><a href="/blog">Blog</a></li>
+                <li data-page-title="Talk to Me"><a href="/talk">Talk to Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+        <div class="header-outter-color"></div>
+        <div class="container">
+	<h2>The Constructor Pattern</h2>
+	<p class="meta">21 Aug 2013</p>
+
+	<div class="post">
+	<h1>Constructor Patterns in JavaScript</h1>
+
+<p>The constructor pattern is used for creating new objects. The two most common ways
+of creating a new object are cited below.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">()</span>
+</code></pre></div>
+
+<p>The common ways to add properties to these values are seen below.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="c1">// Set property</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">myProperty</span> <span class="o">=</span> <span class="s2">&quot;hello world&quot;</span>
+
+<span class="c1">// Get property</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">myProperty</span>
+</code></pre></div>
+
+<p>The way the above works, is by creating new properties that have several default
+keys added to them. For example, the writable and enumerable keys default
+to <code>true</code>. This is what makes the property able to be reassigned and iterable through
+a <code>for in</code> loop. Below is an example of creating an object with explicit definitions
+using the <code>Object.defineProperty</code> method.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="s1">&#39;newProp&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;My new Property&#39;</span><span class="p">,</span>
+    <span class="nx">writable</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">configurable</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">enumerable</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code></pre></div>
+
+<p>After running that code, in the Chrome debugger the object will appear as though the
+property had never been added. Yet, when you type <code>myObject.newProp</code>, <code>My new Property</code> is
+returned. You can try to change the property but it will fail. To learn more about this
+method and property keys, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">MDN`s</a>
+page about it.</p>
+
+<h1>The Prototype</h1>
+
+<p>In JavaScript, functions can be considered classes. I hesitate to say that because JavaScript is
+a classless language. What this really means, is that functions can be used to imitate class-like
+structures common to classical languages. Creating a new class is as simple as the code below.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">MyClass</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>myClass is now a new class constructor. You have not created a new class yet, but written the constructor
+for your new class. By inspecting myClass, you will notice that it has a prototype property, albeit empty.
+The prototype property is the hash that all new instances of myClass will be created with. Below,
+we will create a new class and expand the constructor a little bit.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fname</span><span class="p">,</span> <span class="nx">lname</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">fname</span> <span class="o">=</span> <span class="nx">fname</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lname</span> <span class="o">=</span> <span class="nx">lname</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Person now accepts three arguments and the arguments are passed directly into the class and assigned as class
+variables. Those variables can be accessed after instantiation through the normal property accessors noted above.
+However, if I want to expand the Person class to have a new function of returning the first and last name together,
+I can achieve this by expanding the prototype.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">displayName</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">fname</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lname</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Now, every instantiation of Person will have access to the <code>displayName</code> function.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myPerson</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Seth&#39;</span><span class="p">,</span> <span class="s1">&#39;Howard&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerson</span><span class="p">.</span><span class="nx">displayName</span><span class="p">())</span>
+<span class="c1">// Outputs `Seth Howard`</span>
+</code></pre></div>
+
+<p>The other important piece of information is that each instantiation of the class only references a single prototype
+object, they are not unique to each class. Therefore, if I expand or contract the prototype after the creation of a
+class, that class will only have access to whatever is currently on the Prototype.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="k">delete</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">displayName</span>
+<span class="nx">myPerson</span><span class="p">.</span><span class="nx">displayName</span><span class="p">()</span>
+<span class="nx">TypeError</span><span class="o">:</span> <span class="nb">Object</span> <span class="p">[</span><span class="nx">object</span> <span class="nb">Object</span><span class="p">]</span> <span class="nx">has</span> <span class="nx">no</span> <span class="nx">method</span> <span class="s1">&#39;displayName&#39;</span>
+</code></pre></div>
+
+<p>General rules of thumb for the prototype include
+1 Do not modify the prototype of Objects you do not own</p>
+
+	</div>
+</div>
+
+      </div>
+      <div id="footer">
+        <div class="outter-color"></div>
+        <div class="container">
+          <ul>
+            <li><a href="/me">Me</a></li>|
+            <li><a href="/portfolio">Portfolio</a></li>|
+            <li><a href="/blog">Blog</a></li>|
+            <li><a href="/talk">Talk to Me</a></li>            
+          </ul>
+          <div class="social">
+            <a href="https://github.com/sethhoward1988"><div class="github"></div></a>
+            <a href="https://twitter.com/sethhoward22"><div class="twitter"></div></a>
+            <a href=""><div class="linkedin"></div></a>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

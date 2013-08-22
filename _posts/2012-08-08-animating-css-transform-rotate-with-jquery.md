@@ -3,6 +3,7 @@ layout: post
 title:  "Animating CSS Transform Rotate with jQuery"
 date:   2012-08-08 13:39:31
 categories: 
+snippet: In a recent project that I’ve been working on, I constantly was needing to rotate divs. My first solution, I created my own animation function that recursively called itself on a given interval, which worked pretty well. However, with this solution, I lost the easing capability that was native to jQuery animations. My one option linear easing wasn’t good enough for me, and I also had to deal with figuring out how often the steps happened and so forth and in the end it worked, but didn’t look nearly as pretty as jQuery has it done. So, instead of reinventing the wheel, I looked through the jQuery animate API and created this solution which now works perfectly...
 ---
 
 Posted on August 8, 2012 by admin

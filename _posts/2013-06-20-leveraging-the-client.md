@@ -3,6 +3,7 @@ layout: post
 title:  "Leveraging the Client"
 date:   2013-06-20 13:39:31
 categories: 
+snippet: It often time occurs that web developers need to display time on a web application. Whether that time be the server time, the current time to the user, the time in New York, etc. For all these functions, how can we come up with a cross browser compatible solution of not only outputting the right time, but also receiving the right time from the user in the format that we want it in. There are several different ways to go about this...
 ---
 
 It often time occurs that web developers need to display time on a web application. Whether that time be the server time, the current time to the user, the time in New York, etc. For all these functions, how can we come up with a cross browser compatible solution of not only outputting the right time, but also receiving the right time from the user in the format that we want it in. There are several different ways to go about this.
