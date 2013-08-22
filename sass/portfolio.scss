@@ -1,0 +1,50 @@
+
+.portfolio-grid {
+
+	margin-bottom: 30px;
+
+	h2 {
+		text-align: center;
+	}
+
+	.portfolio-image {
+		margin: 20px auto;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		height:150px;
+		width:200px;
+	}
+
+	.synctrix {
+		background-image: url('img/synctrix.png');
+	}
+
+	.hacker-olympics {
+		background-image: url('img/hackerOlympics.png');
+	}
+
+	.make-droid-dance {
+		background-image: url('img/makeDroidDance.png');
+	}
+
+	.seth-and-chloe {
+		background-image: url('img/sethAndChloe.png');
+	}
+
+	.vto {
+		background-image: url('img/vto.png');
+	}
+
+	.purqz {
+		background-image: url('img/purqz.png');
+	}
+
+	.jessie-james-blog {
+		background-image: url('img/jessieJamesBlog.jpg');
+	}
+
+	.pepsi {
+		background-image: url('img/pepsi.png');
+	}
+}

@@ -3,11 +3,46 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="carousel" class="carousel slide">
+  <!-- Indicators -->
+ <!--  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol> -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item item1 active">
+      <div class="carousel-caption">
+      	<h3>Never Miss a Second</h3>
+    	<p>See the design and javascript behind <a href="http://www.online-stopwatch.us/">online-stopwatch.us</a></p>
+      </div>
+    </div>
+    <div class="item item2">
+      <div class="carousel-caption">
+      	<h3>Developing for the Web</h3>
+      	<p>Pushing the envelope of what the web is designed to do</p>
+      </div>
+    </div>
+    <div class="item item3">
+      <div class="carousel-caption">
+        <h3>Elegant Websites</h3>
+        <p>Build pixel perfect websites to meet customer satisfaction</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
 </div>
+<script>
+	$('#carousel').carousel({
+		interval: 10000
+	})
+</script>

@@ -1,0 +1,49 @@
+/* line 2, ../sass/portfolio.scss */
+.portfolio-grid {
+  margin-bottom: 30px;
+}
+/* line 6, ../sass/portfolio.scss */
+.portfolio-grid h2 {
+  text-align: center;
+}
+/* line 10, ../sass/portfolio.scss */
+.portfolio-grid .portfolio-image {
+  margin: 20px auto;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 200px;
+}
+/* line 19, ../sass/portfolio.scss */
+.portfolio-grid .synctrix {
+  background-image: url("img/synctrix.png");
+}
+/* line 23, ../sass/portfolio.scss */
+.portfolio-grid .hacker-olympics {
+  background-image: url("img/hackerOlympics.png");
+}
+/* line 27, ../sass/portfolio.scss */
+.portfolio-grid .make-droid-dance {
+  background-image: url("img/makeDroidDance.png");
+}
+/* line 31, ../sass/portfolio.scss */
+.portfolio-grid .seth-and-chloe {
+  background-image: url("img/sethAndChloe.png");
+}
+/* line 35, ../sass/portfolio.scss */
+.portfolio-grid .vto {
+  background-image: url("img/vto.png");
+}
+/* line 39, ../sass/portfolio.scss */
+.portfolio-grid .purqz {
+  background-image: url("img/purqz.png");
+}
+/* line 43, ../sass/portfolio.scss */
+.portfolio-grid .jessie-james-blog {
+  background-image: url("img/jessieJamesBlog.jpg");
+}
+/* line 47, ../sass/portfolio.scss */
+.portfolio-grid .pepsi {
+  background-image: url("img/pepsi.png");
+}

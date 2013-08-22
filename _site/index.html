@@ -1,63 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Your New Jekyll Site</title>
         <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
+        
+        <!-- Compiled CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
+        <!-- Script -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
     </head>
     <body>
-
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">Your New Jekyll Site</a></h1>
-              <a class="extra" href="/">home</a>
+      <div id="wrap">
+        <div class="navbar-color">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Seth Miles Howard</a>
             </div>
-
-                <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    
-      <li><span>20 Aug 2013</span> &raquo; <a href="/2013/08/20/test.html">Test Something Here</a></li>
-    
-      <li><span>25 Jun 2013</span> &raquo; <a href="/2013/06/25/how-slow-browser-adoption-hurts.html">How Slow Browser Adoption Hurts</a></li>
-    
-      <li><span>20 Jun 2013</span> &raquo; <a href="/2013/06/20/leveraging-the-client.html">Leveraging the Client</a></li>
-    
-      <li><span>05 Dec 2012</span> &raquo; <a href="/2012/12/05/judge-a-company-by-its-website.html">Judge a Company By Its Website</a></li>
-    
-      <li><span>09 Aug 2012</span> &raquo; <a href="/2012/08/09/animating-from-position-fixed-to-absolute-with-jquery.html">Animating from Position Fixed to Absolute with jQuery</a></li>
-    
-      <li><span>08 Aug 2012</span> &raquo; <a href="/2012/08/08/animating-css-transform-rotate-with-jquery.html">Animating CSS Transform Rotate with jQuery</a></li>
-    
-  </ul>
-</div>
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
+            <div class="collapse navbar-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li data-page-title="Me"><a href="/me">Me</a></li>
+                <li data-page-title="Portfolio"><a href="/portfolio">Portfolio</a></li>
+                <li data-page-title="Blog"><a href="/blog">Blog</a></li>
+                <li data-page-title="Talk to Me"><a href="/talk">Talk to Me</a></li>
+              </ul>
             </div>
           </div>
-        </div> <!-- /container -->
+        </div>  
+        <div class="header-outter-color"></div>
+        <div id="carousel" class="carousel slide">
+  <!-- Indicators -->
+ <!--  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol> -->
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item item1 active">
+      <div class="carousel-caption">
+      	<h3>Never Miss a Second</h3>
+    	<p>See the design and javascript behind <a href="http://www.online-stopwatch.us/">online-stopwatch.us</a></p>
+      </div>
+    </div>
+    <div class="item item2">
+      <div class="carousel-caption">
+      	<h3>Developing for the Web</h3>
+      	<p>Pushing the envelope of what the web is designed to do</p>
+      </div>
+    </div>
+    <div class="item item3">
+      <div class="carousel-caption">
+        <h3>Elegant Websites</h3>
+        <p>Build pixel perfect websites to meet customer satisfaction</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>
+<script>
+	$('#carousel').carousel({
+		interval: 10000
+	})
+</script>
+      </div>
+      <div id="footer">
+        <div class="outter-color"></div>
+        <div class="container">
+          <ul>
+            <li><a href="/me">Me</a></li>|
+            <li><a href="/portfolio">Portfolio</a></li>|
+            <li><a href="/blog">Blog</a></li>|
+            <li><a href="/talk">Talk to Me</a></li>            
+          </ul>
+          <div class="social">
+            <a href="https://github.com/sethhoward1988"><div class="github"></div></a>
+            <a href="https://twitter.com/sethhoward22"><div class="twitter"></div></a>
+            <a href=""><div class="linkedin"></div></a>
+          </div>
+        </div>
+      </div>
     </body>
 </html>

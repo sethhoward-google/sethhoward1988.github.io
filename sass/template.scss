@@ -1,0 +1,51 @@
+@import "variables.scss";
+
+body {
+	font-weight: 100;
+}
+
+.navbar-header{
+	a {
+		color: white;
+	}
+}
+
+.navbar-color {
+	background-color: $primary2;
+
+	.navbar-nav li a{
+		color: white;
+		font-weight: 100;
+
+		&:hover, &.active {
+			background-color: $primary1;
+		};
+	}
+}
+
+.header-outter-color {
+	background-color: $primary1;
+	height: 10px;
+	width: 100%;
+}
+
+#footer {
+	text-align: center;
+	background-color: $secondary2;
+	color: white;
+
+	.outter-color{
+		background-color: $secondary1;
+		height: 10px;
+		width: 100%;
+	}
+
+	li {
+		display: inline-block;
+		list-style: none;
+		padding: 10px 20px;
+		a {
+			color: white;
+		}
+	}
+}

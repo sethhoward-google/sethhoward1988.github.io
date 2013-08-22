@@ -1,0 +1,53 @@
+/* line 3, ../sass/template.scss */
+body {
+  font-weight: 100;
+}
+
+/* line 8, ../sass/template.scss */
+.navbar-header a {
+  color: white;
+}
+
+/* line 13, ../sass/template.scss */
+.navbar-color {
+  background-color: #4daccb;
+}
+/* line 16, ../sass/template.scss */
+.navbar-color .navbar-nav li a {
+  color: white;
+  font-weight: 100;
+}
+/* line 20, ../sass/template.scss */
+.navbar-color .navbar-nav li a:hover, .navbar-color .navbar-nav li a.active {
+  background-color: #1a7898;
+}
+
+/* line 26, ../sass/template.scss */
+.header-outter-color {
+  background-color: #1a7898;
+  height: 10px;
+  width: 100%;
+}
+
+/* line 32, ../sass/template.scss */
+#footer {
+  text-align: center;
+  background-color: #f9ab58;
+  color: white;
+}
+/* line 37, ../sass/template.scss */
+#footer .outter-color {
+  background-color: #f38d22;
+  height: 10px;
+  width: 100%;
+}
+/* line 43, ../sass/template.scss */
+#footer li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px 20px;
+}
+/* line 47, ../sass/template.scss */
+#footer li a {
+  color: white;
+}
