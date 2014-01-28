@@ -6,9 +6,6 @@ categories:
 snippet: The constructor pattern is used for creating new objects. The two most common ways of creating a new object are cited below...
 ---
 
-Constructor Patterns in JavaScript
-==================================
-
 The constructor pattern is used for creating new objects. The two most common ways
 of creating a new object are cited below.
 

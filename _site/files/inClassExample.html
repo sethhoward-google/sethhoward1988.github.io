@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our Examples</title>
+        <meta charset="UTF-8" />
+        <link></link>
+        <style>
+
+            section {
+                border-top: 1px solid black;
+                min-height: 500px;
+            }
+
+            table td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+
+            table{
+                border-collapse: collapse;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <section>
+            <h2>Header Tags</h2>
+            <h1>Header</h1>
+            <h2>Header</h2>
+            <h3>Header</h3>
+            <h4>Header</h4>
+            <h5>Header</h5>
+            <h6>Header</h6>
+        </section>
+        <section>
+            <h2>Span Tags</h2>
+            <span>Hi,</span>
+            <span> my</span>
+            <span> name is Seth.</span>
+        </section>
+        <section>
+            <h2>Div Tag</h2>
+            <div>Hi,</div>
+            <div> my</div>
+            <div> name is Seth.</div>
+        </section>
+        <section>
+            <h2>Lists</h2>
+            <ol>
+                <li>Item # 1</li>
+                <li>Item # 2</li>
+                <li>Item # 3</li>
+                <li>Item # 4</li>
+            </ol>
+            <ul>
+                <li>Item # 1</li>
+                <li>Item # 2</li>
+                <li>Item # 3</li>
+                <li>Item # 4</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tables</h2>
+            <table>
+                    <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Col 1</td>
+                        <td>Row 1 Col 2</td>
+                        <td>Row 1 Col 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Col 1</td>
+                        <td colspan="2">Row 2 Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3 Col 1</td>
+                        <td>Row 3 Col 2</td>
+                        <td>Row 3 Col 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Forms, Inputs, and Labels</h2>
+            <form type="POST" action="/pizzarOrders">
+                <label for="pizzaName">Name</label>
+                <input id="pizzaName" name="pizza_name" type="text" />
+
+                <div>
+                    <h3>Delivery Method</h3>
+                    <label for="radio1">Delivery</label>
+                    <input id="radio1" name="deliver_method" type="radio" value="delivery">
+                    <label for="radio2">Carry out</label>
+                    <input id="radio2" name="deliver_method" type="radio" value="carry_out">
+                </div>
+
+                <div>
+                    <h3>Upload Picture</h3>
+                    <input type="file">
+                </div>
+
+                <div>
+                    <h3>Toppings</h3>
+                    <label for="topping1">Pepperoni</label>
+                    <input id="topping1"name="toppings" type="checkbox">
+                    <label for="topping2">Pineapple</label>
+                    <input id="topping2" name="toppings" type="checkbox">
+                    <label for="topping3">Ham</label>
+                    <input id="topping3" name="toppings" type="checkbox">
+                </div>
+
+                <div>
+                    <h3>Payment</h3>
+                    <select name="payment_method">
+                        <option value="3329">Card ending in 3329</option>
+                        <option selected value="3123">Card ending in 3123</option>
+                        <option value="1239">Card ending in 1239</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Password</h3>
+                    <input type="password">
+                </div>
+                <div>
+                    <h3>Submit</h3>
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Send Order">
+                </div>
+            </form>
+        </section>
+        <section id="script">
+            <h3>Scripts</h3>
+
+            <script>
+                var message = "This page is running JavaScript"
+                var el = document.createElement('div');
+                var script = document.getElementById('script');
+                el.innerText = message;
+                script.appendChild(el);
+            </script>
+
+            <noscript>
+                This page is not running JavaScript.
+            </noscript>
+        </section>
+
+        <section id="iframes">
+            <h3>Iframes</h3>
+            <style>
+                iframe {
+                    position: fixed;
+                    border: none;
+                }
+            </style>
+            <iframe src="http://www.byu.edu" width="100%" height="100%" />
+
+        </section>
+
+
+    </body>
+</html>

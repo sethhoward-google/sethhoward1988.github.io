@@ -1,12 +1,13 @@
 @import "variables.scss";
 
 body {
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .navbar-header{
 	a {
 		color: white;
+        font-weight: 100;
 	}
 }
 
@@ -33,6 +34,7 @@ body {
 	text-align: center;
 	background-color: $secondary2;
 	color: white;
+    font-weight: 100;
 
 	.outter-color{
 		background-color: $secondary1;

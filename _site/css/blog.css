@@ -1,0 +1,17 @@
+/* line 4, ../sass/blog.scss */
+.blog p {
+  font-weight: 300;
+}
+/* line 8, ../sass/blog.scss */
+.blog .image-container {
+  text-align: center;
+  margin: 30px 0px;
+}
+/* line 10, ../sass/blog.scss */
+.blog .image-container img {
+  max-width: 500px;
+}
+/* line 19, ../sass/blog.scss */
+.blog .post {
+  margin-bottom: 50px;
+}

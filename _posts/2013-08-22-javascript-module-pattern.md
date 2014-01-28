@@ -6,9 +6,6 @@ categories:
 snippet: The idea of this pattern is to create variables that are completely private from the global scope. In the example below, we see that the countervariable cannot be directly accessed. The only way the variable can be manipulated is through the defined methods that the module returns...
 ---
 
-Module Pattern
-==============
-
 The idea of this pattern is to create variables that are completely private
 from the global scope. In the example below, we see that the countervariable
 cannot be directly accessed. The only way the variable can be manipulated is

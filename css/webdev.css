@@ -1,0 +1,12 @@
+/* line 3, ../sass/webdev.scss */
+.webdev section {
+  margin-bottom: 100px;
+}
+/* line 7, ../sass/webdev.scss */
+.webdev table {
+  margin-left: 50px;
+}
+/* line 10, ../sass/webdev.scss */
+.webdev table td {
+  padding: 5px 10px;
+}
