@@ -99,6 +99,16 @@ var json = {
                         "z": 409
                     }
                 },{
+                    "name": "The Great Mines",
+                    "type": "image",
+                    "img": "mine",
+                    "position": "fg",
+                    "overworldCoordinates": {
+                        "x": -110,
+                        "y": 12,
+                        "z": 584
+                    }
+                },{
                     "name": "Joel's Fishing Hut",
                     "type": "image",
                     "img": "hut",
