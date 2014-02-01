@@ -89,6 +89,16 @@ var json = {
                         "z": -1504
                     }
                 },{
+                    "name": "SWEETPIPEZ's Shack",
+                    "type": "image",
+                    "img": "hut",
+                    "position": "fg",
+                    "overworldCoordinates": {
+                        "x": 22,
+                        "y": 63,
+                        "z": 409
+                    }
+                },{
                     "name": "Joel's Fishing Hut",
                     "type": "image",
                     "img": "hut",
