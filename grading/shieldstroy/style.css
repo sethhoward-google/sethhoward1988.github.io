@@ -1,0 +1,37 @@
+/*
+Syntax error: Invalid CSS after "$blurbColor: blue": expected selector or at-rule, was ".blurb{"
+        on line 3 of style.scss
+
+1: $blurbColor: blue
+2: 
+3: .blurb{
+4: 	p{
+5: 
+6: 	}
+7: 
+8: 	ul{
+
+Backtrace:
+style.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1147:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:28:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:342:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"$blurbColor: blue\": expected selector or at-rule, was \".blurb{\"\A         on line 3 of style.scss\A \A 1: $blurbColor: blue\A 2: \A 3: .blurb{\A 4: 	p{\A 5: \A 6: 	}\A 7: \A 8: 	ul{"; }

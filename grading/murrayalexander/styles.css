@@ -1,0 +1,181 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@charset 'UTF-8';
+
+/*Margin Color*/
+html{
+  background: #e0e0e0;
+}
+
+/*Body Attributes*/
+body{
+  background: white;
+  width: 80%;
+     margin: 0 auto;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     -webkit-box-shadow:    0 0 10px #000000;
+     -moz-box-shadow:    0 0 10px #000000;
+     box-shadow:    0 0 10px #000000;
+}
+
+/*Wrap Content*/
+#page-wrap {
+     width: 95%;
+     margin: 0 auto;
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+
+/*Header Text*/
+h1{
+  font-family: 'Lato', sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+h2{
+  font-family: 'Lato', sans-serif;
+  color: #094c9e;
+  font-size: 40px;
+  text-align: center;
+}
+h3{
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+}
+h4{
+  font-family: 'Lato', sans-serif;
+  color: #094c9e;
+  text-decoration: underline;
+}
+
+/*Nav Bar*/
+nav ul,
+nav li,
+nav a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  font-family: 'Lato', sans-serif;
+}
+nav {
+  border: 1px solid #041e3d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: auto;
+}
+nav ul {
+  zoom: 1;
+  background: #0c63ce;
+  background: -moz-linear-gradient(top, #0c63ce 0%, #094c9e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0c63ce), color-stop(100%, #094c9e));
+  background: -webkit-linear-gradient(top, #0c63ce 0%, #094c9e 100%);
+  background: -o-linear-gradient(top, #0c63ce 0%, #094c9e 100%);
+  background: -ms-linear-gradient(top, #0c63ce 0%, #094c9e 100%);
+  background: linear-gradient(top, #0c63ce 0%, #094c9e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top-color', endColorstr='@bottom-color', GradientType=0);
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+nav ul:before {
+  content: '';
+  display: block;
+}
+nav ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+nav li {
+  float: left;
+  margin: 0 5px 0 0;
+  border: 1px solid transparent;
+}
+nav li a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 15px 9px 15px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+nav li.active {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #0c63ce;
+}
+nav li.active a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: #06356e;
+  border: 1px solid #041e3d;
+  -moz-box-shadow: inset 0 5px 10px #041e3d;
+  -webkit-box-shadow: inset 0 5px 10px #041e3d;
+  box-shadow: inset 0 5px 10px #041e3d;
+}
+nav li:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #0c63ce;
+}
+nav li:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: #06356e;
+  border: 1px solid #041e3d;
+  -moz-box-shadow: inset 0 5px 10px #041e3d;
+  -webkit-box-shadow: inset 0 5px 10px #041e3d;
+  box-shadow: inset 0 5px 10px #041e3d;
+}
+
+/*Images*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+ max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+img.imageDark {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+ max-width: 100%;
+    height: auto;
+    width: auto\9;
+
+    -webkit-box-shadow:    0 0 10px #000000;
+    -moz-box-shadow:    0 0 10px #000000;
+    box-shadow:    0 0 10px #000000;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic page info -->
+		<title>An Introduction to Responsive Web Design</title>
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
+		<meta charset="UTF-8">
+		<meta name="description" content="This Website was constructed as a part of the Brigham Young University Information Systems Department, for course IS 542.  The site explains the concepts and current best practices underlying HTML5 and CSS3, and emphasizes their role in Responsive Web Design.">
+		<meta name="author" content="Roy Matsunaga">
+		<meta name="keywords" content="HTML, HTML5, CSS, CSS3, Web Design, Web Development, Responsive Web Design, RWD">
+	</head>
+	<body>
+		<div class="body">
+			<header>
+				<div class="header-logo">
+					<img src="img/header-logo.jpg">
+				</div>				<nav>
+					<ul class="nav">
+						<!-- highlight the home nav item -->
+						<li class="nav-home">
+							<a href="index.html">Home</a>
+						</li>
+						<!-- menu item for RWD section -->
+						<li>
+							<a class="dropdown-header" href="#">RWD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="rwd-introduction.html">Introduction</a>
+								</li>
+							</ul>
+						</li>
+						<!-- dropdown menu for html5 section -->
+						<li class="dropdown">
+							<a class="dropdown-header" href="#">HTML5</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="html5-introduction.html">Introduction</a>
+								</li>
+								<li>
+									<a href="html5-features.html">Features</a>
+								</li>
+							</ul>
+						</li>
+						<!-- dropdown menu for css3 section -->
+						<li class="dropdown">
+							<a class="dropdown-header" href="#">CSS3</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="css3-introduction.html">Introduction</a>
+								</li>
+								<li>
+									<a href="css3-features.html">Features</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- main page content -->
+			<div class="content">
+				<!-- Banner -->
+				<img class="top-image" alt="Responsive Web Design" src="img/rwd-banner.jpg">
+				<!-- Introduction to RWD -->
+				<h1>Responsive Web Design</h1>
+				<p>Gone are the days of the reign of the desktop browser as the primary interface for user interaction with the World Wide Web.  The emergence of mobile technologies including mobile phones, tablet personal computers, and other personal electronic devices, and the explosion of their prevalence throughout the globe, shifted the way people consume information via the Web.  In September 2013, the Pew Internet &amp; American Life Project reported that more than 30% of people with Web-surfing mobile capabilities used their mobile device/devices as the primary means for viewing Web pages.  A report by the same group a year previous showed that in the United States, 56 percent of all mobile phone owners accessed the Internet - more than 250 million.</p>
+				<p>In order to respond to the need for more mobile-friendly Websites, Web designers and developers began implementing various techniques for displaying information on different devices.  Originally, mobile device screen sizes were fairly uniform.  Web developers could design their sites according to these distinct screen sizes, which were relatively few in number.  This technique/approach is commonly referred to as Adaptive Web Design, and focuses on using predefined sets of layouts that respond to user device screen sizes based on specified breakpoints.</p>
+				<p>Responsive Web Design, to a point, achieves the same thing that Adaptive Web Design accomplished.  The purpose of both approaches was to create scalable websites that would adjust and change according to the user’s device(s).  However, Adaptive Web Design and Responsive Web Design (RWD) have a few critical differences: 1) how the device screen size is identified; 2) how information is presented and selected; 3) performance; and 4) development complexity (see http://visual.ly/adaptive-web-design-vs-responsive-web-design).  Even though RWD uses the same technologies and languages in order to achieve its goals as other methods, the way it implements those technologies sets it apart.  Cascading Style Sheets version 3 (CSS3) and HTML 5 are primary tools for implementing RWD.</p>
+				<p>While other web development technologies focus on creating distinct versions of websites for different screen sizes, based on server/client-side scripting/code to identify, serve, and display information, RWD takes a more comprehensive approach that focuses on mobile first, and uses media queries, the power of CSS3 and HTML5, At-sign rules (CSS), fluid grids, and flexible media in order to respond to the device screen size with a single website and template.  This approach, though more costly in performance, allows web pages to display all information no matter what screen size, and to  interact with the elements of the web page using all of the supported features on the device on which it is being displayed.</p>
+				<p>To learn more about HTML5 and RWD, click <a href="rwd-concepts.html">here.</a></p>
+				<p>To learn more about CSS3 and RWD, click <a href="rwd-concepts.html">here.</a></p>
+			</div>
+			<footer>
+				<div class="footer-content">
+					<div class="footer-section1">
+						<a href="index.html" class="logo">
+							<img alt="HTML5 and CSS3 "src="img/logo-footer.jpg">
+						</a>
+					</div>
+					<div class="footer-section2">
+						<p class="footer-copyright">Copyright 2013 by Roy Matsunaga.</p>
+					</div>
+				</div>
+			</footer>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,123 @@
+.hero {
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1300px; }
+
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: white;
+  font-size: 140px; }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px; }
+
+  h2 {
+    font-size: 30px; }
+
+  body {
+    font-size: 12px; } }
+.content {
+  font-family: sans-serif;
+  background-color: black; }
+
+.nav ul li {
+  padding: 14px;
+  margin-left: 5px;
+  border-radius: 25px;
+  display: inline-block;
+  background-color: #66CCFF; }
+.nav li:hover {
+  background-color: #003366;
+  transition: 1s; }
+.nav ul {
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  float: right; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif; }
+.nav a:link {
+  color: white; }
+.nav a:hover {
+  color: red;
+  transition: 1s; }
+.nav a:active {
+  color: yellow; }
+
+.infoHeader {
+  margin-left: 50px; }
+  .infoHeader img {
+    float: left;
+    max-height: 60px;
+    margin-right: 10px; }
+  .infoHeader h2 {
+    font-size: 60px;
+    color: white; }
+
+.center {
+  width: 90%;
+  margin: 0 auto; }
+
+.sectIntro {
+  color: #374857; }
+  .sectIntro a {
+    color: #374857; }
+
+.blurb {
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 1%;
+  padding: 10px;
+  color: #E6E6E6;
+  background-color: #374857;
+  border-radius: 25px; }
+  .blurb ul {
+    list-style: none; }
+  .blurb h3 {
+    text-align: right;
+    font-size: 25px; }
+  .blurb a {
+    color: white; }
+  .blurb a:hover {
+    color: #CFF9FF; }
+
+.thirds {
+  width: 30%;
+  min-width: 220px; }
+
+.half {
+  width: 45%;
+  min-width: 340px; }
+
+section {
+  float: none;
+  clear: both;
+  margin: -3;
+  overflow: hidden;
+  background-color: #374857;
+  transition: 2s; }
+  section section:hover {
+    background-color: #6A8DAB;
+    transition: 2s; }
+
+.instruction {
+  padding: 15px;
+  width: 95%;
+  color: white; }
+  .instruction a {
+    color: white; }
+  .instruction a:hover {
+    color: #CFF9FF; }
+
+.instruction:hover {
+  background-color: #6A8DAB;
+  transition: 2s; }
+
+code {
+  color: black; }

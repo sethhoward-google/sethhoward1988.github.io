@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MySQL Form Example</title>
+	<meta name="author" content="Matt Winn" />
+	<meta name="description" content="A MySQL form input example" />
+	<meta charset="UTF-8" />
+        <link href="css/styles.css" rel="stylesheet" />
+	<base href="C:/Users/Mateo/Documents/IS542/Project1/" />
+    </head>
+    <body>
+	<div class="content">
+	    <header>
+		<ul class="menu_bar">
+		    <li><img src="images/bar_logo_mysql.png"</li>
+		    <li><a href="index.html">Home</a></li>
+		    <li>
+			<a href="form_example.html">Examples</a>
+			<ul class="submenu_bar">
+			    <li><a href="form_example.html">Form Example</a></li>
+			    <li><a href="ajax_example.html">Ajax Example</a></li>
+			</ul>
+		    </li>
+		    <li><a href="aboutme.html">About</a></li>
+		</ul>
+	    </header>
+	    <div class="title">
+		<h1>Form Example</h1>
+	    </div>
+	    <!--This section introduces the purpose of the page-->
+	    <section>
+		<p>
+		MySQL as a relational database is great at giving any website back-end functionality.
+		This means that users of your website can submit information, and your website will be able to store and
+		manipulate that information to do what you need it to. This form example will show you some simple examples
+		of what that looks like.
+		</p>
+		<p>Just enter some information in the boxes below and press submit. Go on, try it!</p>
+	    </section>
+	    <section>
+		<form method="get" action="Table_form.html">
+		<p><label for="name">Enter your name: <input autofocus id="name" name="name"/></label></p>
+		<p><label for="city">Enter your city: <input id="city" name="city"/></label></p>
+		<p><label for="age">Enter your age: <input id="age" name="age"/></label></p>
+		<button>Submit Form</button>
+		<p>
+		The miracle of using a database like MySQL behind the scenes is that you can manipulate and store input data,
+		which includes spitting it out on other pages! Once you submit this form, you will be directed to another
+		page that will show you your information in a table.
+		</p>
+		</form>
+	    </secion>
+	</div>
+    </body>
+</html>

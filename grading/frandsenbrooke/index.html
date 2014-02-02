@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS</title>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" href="css/images/favicon.ico">
+        <link href="css/style.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                <nav>
+                    <ul>
+                        <a href="index.html"><li>Brooke Frandsen</li></a>|
+                        <a href="index.html"><li>Angular JS</li></a>
+                        <a href="aboutme.html"><li>About Brooke</li></a>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <div class="backgroundimage">
+                    <h1>AngularJS</h1>
+                    <h2>&lt;HTML for Web Apps&gt;</h2>
+                </div>
+                <section>
+                <h3 class="arrow">What is Angular JS?</h3>
+                    <img id="angularLogo" alt="angular" src="css/images/angularlogo.png"/>
+                    <p>AngularJS is a framework created to assist in creating applications within a browser (can it do more?). The goal of the creators was to make development and testing easier. Using two-way binding, the view and model are kept in synchronization. 
+
+                     The framework is easy enough. A developer (perhaps the smart, front-end guy) first marks up an html document with angular tags that correspond to the data that requires dynamicy. The data for the page is provided in the form of a JSON object. Simply stated, the values within the object update the angular tags within the html, making the page dynamic. 
+
+                     For example, suppose you want to write a page that provides a list of projects. You wish to use links on the side that, when clicked, filter the results of the product list. All you would need to do is send off an ajax request that returns a json object with information about the desired products and the html elements will automatically update without the need of jQuery.
+                    </p>
+                </section>
+                <section>
+                    <h3>The Benefits</h3>
+                    <p>So why would you ever want to use AngularJS? There are several benefits to using this framework. Some of them are more obvious than others, but the technology is new enough that new ways of using Angular and additional benefits are being discovered all the time. The following are some benefits of adopting this framework.
+                    <ul>
+                        <li>Traditional HTML is extended to better serve dynamic content</li>
+                        <li>Lighter web application</li>
+                        <li>DOM manipulation is eliminated from the list of things to do</li>
+                        <li>Users can bookmark and email links to locations within apps though it uses AJAX by deep linking</li>
+                        <li>Angular is not demanding, you can use as much or as little as you'd like</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>The Basics</h3>
+                    <div class="snippet"> 
+                        <h4 class="snippetTitle">ng-app</h4>
+                        <p class="snippetDescription">ng-app is used to identify the angular portion of a page. This allows you to limit the scope to a particular portion.</p>
+
+                        <div>
+                            <code>&lt;html ng-app&gt;</code>
+                            <p>In this case, ng-app is activating the entire page.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="snippet"> 
+                        <h4 class="snippetTitle">ng-modal</h4>
+                        <p class="snippetDescription">ng-modal is used to link the model and the view. If the model is updated via the textbox or input that ng-model is on, the view is updated. The model may also be a variable within a JSON object.</p>
+
+                        <div>
+                            <code>
+                                Model: &lt;input type="text" ng-model="yourName" placeholder="Enter a name here"&gt;
+                                View: &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;</code>
+                            <p>In this case, if you type your name in the input box, the text surrounded by curly braces will update with the input box's value.</p>
+                        </div>
+                    </div>                                 
+
+                
+                    <div class="snippet"> 
+                        <h4 class="snippetTitle">ng-controller</h4>
+                        <p class="snippetDescription">ng-controller is used to identify the angular portion of a page. This allows you to limit the scope to a particular portion.</p>
+
+                        <div>
+                            <code>
+                                <ul>
+                                    <li>&lt;div ng-controller="TodoCtrl"&gt;</li>
+                                    <li>  &lt;div&gt;{{remaining()}} of {{todos.length}} remaining&lt;/div&gt;</li>
+                                    <li>[ &lt;a href="" ng-click="archive()"&gt;archive&lt;/a&gt; ]</li>
+                                    <li>&lt;ul class="unstyled"&gt;</li>
+                                    <li>&lt;li ng-repeat="todo in todos"&gt;</li>
+                                    <li>&lt;input type="checkbox" ng-model="todo.done"&gt;</li>
+                                    <li>&lt;div class="done-{{todo.done}}"&gt;{{todo.text}}&lt;/div&gt;</li>
+                                    <li>&lt;/li&gt;</li>
+                                    <li>&lt;/ul&gt;</li>
+                                    <li>&lt;form ng-submit="addTodo()"&gt;</li>
+                                    <li>&lt;input type="text" ng-model="todoText"  size="30"
+                                               placeholder="add new todo here"&gt;</li>
+                                    <li>&lt;input class="btn-primary" type="submit" value="add"&gt;</li>
+                                    <li>&lt;/form&gt;</li>
+                                    <li>&lt;/div&gt;</li>
+                                </ul>
+                            </code>
+                            <p>In this case, ng-app is activating the entire page.</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Directives</h3>
+
+                        <p>What are directives? All of the ng- prefixed names are directives. Directives are a way of grouping HTML together in order to perform some sort of DOM manipulation. When the complier finds the directive, the function(s) can do just about anything. You can use a directive that already exists, on the Angular website, or create your own to fit the needs of your webpage.</p>
+
+                        <p>Additionally, a directive extends HTML. Rather than using a div or div, you can then use a more semantic tag such as 'shopping-cart'. In fact, this makes it easy to break HTML into components. Components are useful when you use a portion of HTML over and over again. </p>
+                        
+                        <p>For example, suppose I am writing a blog site with multiple articles, sections, and teasers. Instead of writing each document separately, I could write components such as heading, image with caption snippets, and other repeated HTML. The navigation could be a simple component that is included on every page.</p>
+
+                        <p>Here are some popular directives:</p>
+
+                        <ul class="directives">
+                            <li>ng-app 
+                                <div>
+                                    Designates the root element of the angular application.
+                                </div>
+                            </li>
+                            <li>ng-bind 
+                                <div>
+                                    Changes the HTML text to the value of a given expression.
+                                </div>
+                            </li>
+                            <li>ng-model
+                                <div>
+                                    Allows two-way binding. If the text on the DOM changes, the variable within the scope changes. If the variable within the scope changes, the text on the DOM changes.
+                                </div>
+                            </li>
+                            <li>ng-class 
+                                <div>
+                                    Dynamically loads class attributes.
+                                </div>
+                            </li>
+                            <li>ng-controller 
+                                <div>
+                                    Designates a javascript controller class that contains functions and attributes for DOM manipulation
+                                </div>
+                            </li>
+                            <li>ng-repeat 
+                                <div>
+                                    Can be used to repeat an HTML element for every value in a javascript object.
+                                </div>
+                            </li>
+                            <li>ng-show 
+                                <div>
+                                    Shows a particular element if an expression evaluates to true.
+                                </div>
+                            </li>
+                            <li>ng-hide 
+                                <div>
+                                    Shows a particular element if an expression evaluates to true.
+                                </div>
+                            </li>
+                            <li>ng-switch 
+                                <div>
+                                    Switches between different HTML template elements according to a selected expression.
+                                </div>
+                            </li>
+                            <li>ng-if 
+                                <div>
+                                    Creates or deletes an element according to an expression's evaluation of true or false.
+                                </div>
+                            </li>
+                        </ul>
+
+                    <p>Each directive has a specific purpose. If you're already writing in angular, it's worth researching directives for common jQuery functions such as autocomplete, mouseovers, and input.</p>
+                </section>
+                <section>
+                    <h3>Resources</h3>
+                    <p>There's more! Athough Angular is fairly new, the API is neat and easy to use. Each directive is explained in more detail and has associated examples. In fact, Angular had it's first tech conference (ng-conf) this year. Videos from the conference are posted on the <a href="http://angularjs.org/">Angular.org</a> website. Check out some of the awesome resources below to learn more.</p>
+                    <ul>
+                        <li><a href="https://egghead.io/">https://egghead.io/</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/AngularJS">http://en.wikipedia.org/wiki/AngularJS</a></li>
+                        <li><a href="http://angularjs.org/">http://angularjs.org/</a></li>
+                    </ul>
+                </section>
+            </section>
+            <footer>
+                <p>&copy; 4ourthChild &nbsp;|&nbsp;  Brooke Frandsen  &nbsp;|&nbsp;  brookefrandsen@gmail.com</p>
+            </footer>
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,70 @@
+﻿@mainColor: silver;
+@secondaryColor: darkred;
+@accentColor: black;
+
+body	{
+	background-color: silver;
+	color: darkred;
+	
+}
+section	{
+	margin: 15px;
+	border: 15px;
+	padding: 15px;
+}
+h1, h2, h3, h4 {
+	font-family: 'Paprika', cursive;
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: none;
+  }
+}
+footer {
+	margin: 15px;
+	border: 15px;
+	padding: 15px;
+}
+nav {
+	text-align:left;
+	display: block;
+	border-bottom: medium;
+	border-bottom-color: black;
+	width: 100%;
+	margin: 5px;
+	padding: 5px;
+	
+}
+nav .second {
+	
+}
+canvas {
+	border: thin solid black; 
+	margin: 4px;
+}
+button {
+	color: navy;
+	font-family: Arial;
+	
+}
+
+button .main{
+	button-width: 100px;
+	height: 40px;
+}
+
+a:visited {
+	color:darkred;
+}
+
+a:link {
+	color: black;
+}
+
+a:hover {
+	border-bottom:medium;
+	border-bottom-color:white;
+	border-bottom-style:double;
+	color:black;
+}

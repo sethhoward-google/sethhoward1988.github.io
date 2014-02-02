@@ -1,0 +1,146 @@
+/*This is where the main body styling is set*/
+body {
+    margin: 0;
+    font-family: 'Rosarivo', sans-serif;
+    font-weight: 80;
+    color: #2A0A1B;
+}
+
+/*The content centers the page contents*/
+.content {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.content-right {
+    width: 65%;
+}
+
+/*Styling/formatting for the videos*/
+.frame {
+    padding: 25px 0px 0px 0px;
+    text-align: center;
+    border: none;
+}
+
+/*Nav tags used mostly to format pictures/text*/
+.nav, .content-right, .block {
+    display: inline-block;
+    margin-right: 110px;
+}
+
+.nav {
+    width: 33%;
+    vertical-align: top;
+}
+
+/*Block formatting*/
+.block {
+    width: 40%;
+    vertical-align: top;
+}
+
+.block img {
+    width: 500px;
+}
+
+.block ul {
+    padding: 0px 15px;
+}
+
+/*Formatting text, aligning center*/
+.center {
+    text-align: center;
+}
+
+.center h1{
+    text-align: center;
+    font-family: 'Rammetto One', cursive;
+    font-size: 40px;
+}
+
+/*Aligning left or right*/
+.right {
+    float: right;
+    width: 14px; 
+    margin-right: 5px;
+    text-align: left;
+}
+.left {
+    float: left;
+    width: 14px; 
+    margin-right: 5px;
+    text-align: left;
+}
+
+/*Styling the navigation bar at the bottom of homepage*/
+ul.bar{
+    list-style: none;
+    margin-right: 1em; 
+}
+ 
+li a {
+    color: #000000;
+    text-decoration: none;
+    float: left;
+    font-family: 'Rammetto One', cursive;
+    font-size: 20px;
+    padding: 12px;
+}
+ 
+li a:hover {
+    color: #FFFFFF;
+    -webkit-transform: rotate(-10deg) scale(1.2);
+    -moz-transform: rotate(-10deg) scale(1.2);
+    -o-transform: rotate(-10deg) scale(1.2);
+}
+
+/*Section formatting*/
+section {
+    margin: 20px 0px;
+}
+
+/*body section:first-child {
+    margin-top: 0;
+}*/
+
+/*Purple background*/
+section.purple-bg {
+    background-color: #3B0B17;
+    color: white;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+section.purple-bgbar {
+    background-color: #3B0B17;
+    color: white;
+    margin-bottom: 0;
+    padding: 10px 0px 120px 0px;
+}
+
+/*Gray background*/
+.gray-bg {
+    background-color: #848484;
+    color: white;
+    margin-bottom: 0;
+    padding: 5px 0px 80px 0px;
+}
+
+/*Blue background
+section.blue-bg h2 {
+    margin-top: 0px;
+}*/
+
+/*Citations*/
+.resources {
+    font-size: 13px;
+}
+
+/*For option block/box/arrow/etc headers*/
+.featured-block {
+    background-color: #68217A;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+}

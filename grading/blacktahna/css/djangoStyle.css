@@ -1,0 +1,148 @@
+/* ********************************************************************* Header */
+header {
+	font-family: 'Rock Salt', sans-serif;
+	text-align: center;
+}
+
+header h1 {
+    background-color: green;
+    color: white;
+    padding: 20px 0px;
+    position:relative;
+}
+
+.topTitle {
+	font-family: 'Rock Salt', sans-serif;
+	color: orange;
+}
+
+.topMenu {
+	font-family: 'Rock Salt', sans-serif;
+}
+
+table.direct {
+    top: 50px;
+    color: orange;
+    border-width: 5px;
+    border-color: black;
+}
+
+/* *********************************************************************** Main */
+
+/* ***********************************************What is Django */
+
+.django {
+	font-family: 'Oranienbaum', serif;
+}
+
+.django h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+.image {
+	text-align: center;
+}
+
+/* ***********************************************Django Framework */
+.framework {
+	font-family: 'Oranienbaum', serif;
+}
+
+.framework h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+table.framework {
+    top: 50px;
+    color: black;
+    border-color: orange;
+}
+
+/* ***********************************************Installation */
+.install {
+	font-family: 'Oranienbaum', serif;
+}
+
+.install h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+/* ***********************************************Tutorial */
+.tutorial {
+	font-family: 'Oranienbaum', serif;
+}
+
+.tutorial h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+/* *********************************************** Why Even Use Python? */
+.python {
+	font-family: 'Oranienbaum', serif;
+}
+
+.python h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+.iframe {
+	text-align: center;
+}
+
+/* *********************************************** Django Fun Facts */
+.facts {
+	font-family: 'Oranienbaum', serif;
+}
+
+.facts h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+/* *********************************************** References */
+.references {
+	font-family: 'Oranienbaum', serif;
+}
+
+.references h3 {
+	background-color: green;
+    color: white;
+    padding: 8px 0px;
+    position:relative;
+    padding-left:10px;
+}
+
+/* ***********************************************Footer */
+footer {
+    font-family: 'Rock Salt', sans-serif;
+    background-color: green;
+    color: white;
+    margin-bottom: 0;
+    padding: 20px 0px;
+    position:relative;
+    bottom:-100px;
+    text-align: center;
+}

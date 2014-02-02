@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html overflow-y: scroll>
+    <head>
+        <title>MySQL Output Results</title>
+	<meta name="author" content="Matt Winn" />
+	<meta name="description" content="Output from the form example in a table" />
+	<meta charset="UTF-8" />
+        <link href="css/styles.css" rel="stylesheet" />
+	<base href="C:/Users/Mateo/Documents/IS542/Project1/" />
+    </head>
+    <body>
+	<div class="content">
+	    <header>
+		<ul class="menu_bar">
+		    <li><img src="images/bar_logo_mysql.png"</li>
+		    <li><a href="index.html">Home</a></li>
+		    <li>
+			<a href="form_example.html">Examples</a>
+			<ul class="submenu_bar">
+			    <li><a href="form_example.html">Form Example</a></li>
+			    <li><a href="ajax_example.html">Ajax Example</a></li>
+			</ul>
+		    </li>
+		    <li><a href="aboutme.html">About</a></li>
+		</ul>
+	    </header>
+	    <!--This part has a table that displays the user's data entered in the previous page-->
+	    <div class="title">
+		<h1>Table Output from the Form Example</h1>
+	    </div>
+	    <table>
+		<tr class="headrow">
+		    <td>Name</td>
+		    <td>City</td>
+		    <td>Age</td>
+		</tr>
+		<tr>
+		    <td id="name">Matt</td>
+		    <td id="city">Provo</td>
+		    <td id="age">26</td>
+		</tr>
+	    </table>
+	    <!--This section introduces the purpose of the page-->
+	    <section>
+		<p>
+		Without a database behind the scenes on a website, you can't store information and use it later on in your website.
+		MySQL is the most popular website database right now. As you can see above, because of the MySQL database running behind
+		the scenes, the website can take the data you entered into the form and reassemble it on a different page!
+		</p>
+	    </section>
+	</div>
+    </body>
+</html>

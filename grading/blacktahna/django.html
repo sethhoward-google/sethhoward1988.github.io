@@ -1,0 +1,164 @@
+<!DOCTYPE html>  
+  
+<html lang="en">  
+<head>  
+    <meta charset="utf-8">  
+    <title>Django</title>
+    <link href="css/djangoStyle.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt&effect=fire-animation|Roboto:400,100' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Oranienbaum' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+		<header>
+			<div class="font-effect-fire-animation">
+				<h1>Django - Much More Than a Blockbuster</h1>
+			</div>
+			<img src="img/django_unchained.jpg" alt="Django Unchained" width="400" height="300">
+			<img src="img/django.jpg" alt="Django" width="400" height="300">
+			<h2>The Web framework for perfectionists with deadlines.</h2>
+		
+		</header>
+	<section>
+	<main>
+	<div class="topTitle">
+	</div>
+		
+		<section class="topMenu">
+			<table class="direct" border="1" cellpadding="10">
+				<tr>
+  					<td><a href="#django">What is Django?</a></td>
+  					<td><a href="#framework">The Django Framework</a></td>
+  					<td><a href="#install">Installation</a></td>
+  					<td><a href="#tutorial">Tutorial</a></td>
+  					<td><a href="#python">Why Even Use Python?</a></td>
+  					<td><a href="#facts">Django Fun Facts</a></td>
+  					<td><a href="#references">References</a></td>
+				</tr>
+			</table>
+		</section>
+
+		<article>
+
+		<section class="django">
+			<h3><a id="django">What is Django?</a></h3>
+			<p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It is an open-source and free web application framework, written in Python and maintained by the Django Software Foundation (DSF).  Django follows the model-view-controller architectural model and focuses on reusability, rapid development, and automating as much as possible.  Created in 2003, it was designed to ease the creation of complex, database-driven websites by making common web development tasks fast and easy.</p>
+			<div class="image">
+			<img src="img/mvc.png" alt="MVC" width="425" height="350">
+			<img src="img/djangoVisual.jpg" alt="Django Model" width="425" height="350">
+			</div>
+		</section>
+
+		<section class="framework">
+			<h3><a id="framework">The Django Framework</a></h3>
+				<table class="framework" border="1" cellpadding="10">
+					<tr>
+						<th>Object-Relational Mapper</th>
+  						<td>Use Python to define your data models. A dynamic database-access API is yours for free.</td>
+  					<tr>
+						<th>Automatic Admin Interface</th>
+  						<td>Django creates production-ready interfaces for people to add and update content automatically.</td>
+  					</tr>
+  					<tr>
+						<th>Elegant URL Design</th>
+  						<td>There are no framework-specific limitations, so you can design good-looking and flexible cruft-free URLs.</td>
+  					</tr>  
+  					<tr>
+						<th>Template System</th>
+  						<td>Django provides an extensibe and designer-friendly template language to separate content, design, and Python code.</td>
+  					</tr>
+  					<tr>
+						<th>Cache System</th>
+  						<td>Get into memcached or other cache frameworks for greater performance.</td>
+  					</tr>
+  					<tr>
+						<th>Internationalization</th>
+  						<td>Django provides support for multi-language applications, allowing the user to specify translation strings and providing hooks for language-specific functionality.</td>
+  					</tr>
+				</table>
+		</section>
+
+		<section class="install">
+			<h3><a id="install">Installation</a></h3>
+			<p>
+				<ol>
+            		<li>Install Python</li>
+            			<ul>
+            				<li>Download Python at <a href="http://www.python.org/" target="_blank">python.org</a>. If you are running Linux or Mac OS X, it is most likely already installed.</li>
+            				<li>You can verify that Python is installed by typing "python" from your shell. You should see a message like this:</li>
+            				<pre>Python 2.6.6 (r266:84292, Dec 26 2010, 22:31:48)
+[GCC 4.4.5] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>></pre>
+            			</ul>
+            		<li>Remove old versions of Django</li>
+            		<li>Install Django</li>
+            			<ul>
+            				<li>There are three doable options to install Django:</li>
+            					<ol>
+            						<li>Install a version of Django provided by your OS distribution.</li>
+            						<li>Install an official release.</li>
+            						<li>Install the latest development version.</li>
+            					</ol>
+            				<li>You can verify that Django is connected to Python by typing "python" from your shell, then trying to import Django:</li>
+            					<pre>>>> import django
+>>> print(django.get_version())
+1.6</pre>
+            			</ul>
+            		<li>You're Done!</li>
+        		</ol>
+			</p>
+		</section>
+
+		<section class="tutorial">
+			<h3><a id="tutorial">Tutorials</a></h3>
+			<p>You can Google to find many Django tutorials, but I recommend a beginner tutuorial found at <a href="https://docs.djangoproject.com/en/1.6/intro/tutorial01/" target="_blank">Django Project</a>.  It's straightforward, written for beginners, and even titled "Writing Your First Django App". You can't get much better than that!</p>
+		</section>
+
+		<section class="python">
+			<h3><a id="python">Why Even Use Python?</h3>
+			<p>Django is a framework for the Python programming language. Though most readers of this article are probably already in love with Python, I know of a few skeptics.  Here is a list of reasons why Python is the language of the century (and it comes from a very trusted source). You have to love Python before you'll love Django!</p>
+
+			<div class="iframe">
+			<iframe src="http://warp.byu.edu/site/content/1306" width="800" height="1600"></iframe>
+			</div>
+		</section>
+
+		<section class="facts">
+			<h3><a id="facts">Django Fun Facts</a></h3>
+			<p>
+				<ul>
+            		<li>Popular sites that use Django include Pinterest, Instagram, Mozilla, The Washington Times, and the Public Broadcasting Service</li>
+            		<li>Django was created by Adrian Holovaty and Simon Willison, web programmers at the Lawrence Journal-World newspaper.</li>
+            		<li>Because the Holovaty and Willison were constantly in a fast-moving online-news environment, Django was created to handle the difficulties that come with intensive newsroom-deadlines in order to meet the stringent requirements of the men who wrote it.</li>
+            		<li>Django is named after guitarist Django Reinhardt.</li>
+        		</ul>
+			</p>
+		</section>
+
+		<section class="references">
+			<h3><a id="references">References</a></h3>
+			<p>
+				<ul>
+            		<li>https://www.djangoproject.com/</li>
+            		<li>http://warp.byu.edu/site/content/category/blog</li>
+            		<li>Wikipedia</li>
+        		</ul>
+			</p>
+		</section>
+
+		</article>	
+
+	</main>
+	</section>
+
+	<section>
+	<footer>
+		<a href="TotallyTahna.html">Home</a>
+	</footer>
+	</section>
+
+</body>
+
+</html>

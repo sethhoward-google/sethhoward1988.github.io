@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- I'd like to make the CSS site remaniscent to a gaming console -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <title>Application-Like Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Forces the site to display within the reported confinces of the window (initially) -->
+    <meta charset="utf-8" />
+    <script>
+    <!--
+      $(function(){
+        $("header").load("header.html"); 
+        $("footer").load("footer.html"); 
+      });
+-->
+    </script>
+  </head>
+  <body>
+    <header>
+      <!-- TODO Insert Header Here (Note: Should be included with javascript once we hit the javascript portion -->
+      <ul>
+        <li><a href="about.html">About Mobile Fortress</a></li>
+        <li class="active"><a href="index.html">Application-Like WebApps</a></li>
+      </ul>
+    </header>
+    <div id="content-body">
+      <data-title>
+      <h1>MobileFortress</h1>
+      <h2>Mobile-Aware Design and Maintenance</h2>
+      </data-title>
+      <article>
+        <h1>Developing MobileApp-Like Applications</h1>
+        <!-- Info on correctly using the section tag: http://html5doctor.com/the-section-element/ -->
+        <p>More and more, mobile devices are becoming a staple of our everyday lives.  We depend on them for email, phone, instant messaging, social network updates, entertainment, and even e-commerce.  However, the number and variety of devices is also abundant, making life hard for mobile application designers and web developers alike.  Does anyone really enjoy designing and maintaining the same website/application for three different platforms?  The answer is no.  Luckily, creating custom frameworks or applications for each device is not the only option we have.  One convenient way of killing the proverbial two birds with a single stone, is to create websites that can imitate mobile applications when browsed in those environments.</p>
+        <p>Now, maybe you're thinking, &quot;Wait, wait, wait... Applications and websites are completely different.  You can't turn a web-site into an application, and typically only badly-designed applications look like a web site.&quot;  But here at Mobile Fortress, we believe that a website should be formatted however provides the best experience for end-users, at the lowest development costs.</p>
+        <section>
+          <h2>Application-Like Websites</h2>
+          <p>As we already discussed, creating custom applications for each potential device can be tedious (not to mention, expensive).  So instead, we leverage existing web technologies to be functionally equivalent to simple native applications.  The code is written once, and displays nicely for everyone, regardless of OS.  For mobile devices, we can even utilize some of their platform-specific functionality, such as touch/swipe navigation, Global Positioning System, or even their camera.</p>
+        </section>
+        <section>
+          <h2>Building a Web Application</h2>
+          <p>In order to create an attractive webapp experience for our end users, there's a few points of interest that we really need to address, including device-based capabilities, smooth transitions, and site composition.</p>
+          <section>
+            <h3>Device-based capabilities</h3>
+            <img class="scaling_img_25 right" src="images/Use-swipe-and-flick-navigation.jpg" alt="Swipe navigation"/>
+            <p>Today's mobile devices are significantly more elegant and sophisticated than the clunky web browsers of yesteryear.  Devices typically have the ability to receive touch input, but don't have fully-functional keyboards.  This requires us to reduce the gauntlet of text fields some web sites force users through before accessing their site, and replace them with touch-sensitive navigation, emulating the functionality of modern native applications.</p>
+            <p>Global Positioning Systems (GPS) are frequently available on mobile devices, allowing us to provide content or services specific to a user's location.  Wouldn't it be awesome if your local pizza place's website had the ability to guide you directly to their store?  Yes.  Yes it would.</p>
+            <p>Mobile developers have found a number of novel ways to utilize the video/still-image functionality of modern devices, from measuring your pulse to displaying &quot;enhanced reality&quot; images overlaying the live camera feed.  For a store, you might allow customers to scan a bar-code to price-check an item prior to purchasing, and allow them access to <i>exclusive</i> coupons by using your site.</p>
+            <img class="scaling_img_50" src="images/responsive-web-design.jpg" alt="Responsive Web Design example" /><br />
+            <a href="http://padilicious.com/code/touchevents/">Padilicious.com</a>
+          </section>
+          <section>
+            <h3>Smooth Transitions</h3>
+            <p>Most people's journey through the vast World Wide Web is actually a series of abrupt bumps from one page to another.  Click a hyperlink, and <b>flash!</b> everything changes, and the website rebuilds.  On slow-bandwidth devices, this journey also includes long waits, as content is laboriously carted from the Internet onto their device.  Again, these can distract and dissuade users from consuming valuable content.  App-like websites seek to reduce these distractions through the use of GPU-accelerated transitions, dynamic content loading, and optimizing to device abilities.</p>
+            <p>GPU-acceleration is quickly becoming a standard on mobile devices, and web-pages can take advantage of this technology to reduce the stop-gap feel prevalent in today's websites.  For example, the following CSS code allows devices to enable their GPU to smoothly render certain JavaScript animations and transitions:</p>
+            <div class="code">
+              <!-- I believe the requirements stated that we can use an outside library for code formatting? -->
+              <code class="prettyprint">
+                &lt;!-- Forces the site to display within the reported --&gt;<br>
+                &lt;!-- confinces of the window (initially) --&gt;<br>
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+              </code>
+            </div>
+            <p>Instead of following the traditional HTML approach of &quot;jumping&quot; between views, we can smoothly transition the user's view, giving them a better mental model of the virtual world you are trying to construct.  Combined with a good touch interface, users will find your site significantly more intuitive and navigable.</p>
+            <a href="http://www.urbaninsight.com/2013/01/04/improving-html5-app-performance-gpu-accelerated-css-transitions">UrbanInsite: GPU Accelerated CSS Transitions</a>
+          </section>
+          <section>
+            <h3>Dynamic Optimized Content Loading</h3>
+            <p>Say your friend, Fred, owns a photography business.  He uses his website to display some beautiful photographs taken by his agency.  Full-blown photographs could take minutes to load on a slow connection, and they are not likely to be appreciated on a small, mobile device.  In order to decrease load times, the website keeps multiple versions of the photograph, and dynamically determines which to serve based on the client's needs: a small photo is served to mobile clients, a larger version is given to desktop (high-bandwidth / large display) clients, and the full-blown image is given to any user who specifically asks for it.  This cuts down on the time it takes to load pages, delivering a much faster and smoother experience to the end-user.</p>
+          </section>
+          <section>
+            <h3>Dynamic composition</h3>
+            <!-- TODO implement javascript to download optimized images on smaller screens. -->
+            <img class="scaling_img_50 right" src="images/Responsive_Web_Design_Different_Formats.jpg" alt="Responsive Web Design on different platforms" />
+            <p>The final area of App-like website development I want to emphasize is dynamic composing, otherwise known as Responsive Web Design (RWD).  RWD technologies essentially allow the site's content to dynamically resize and reposition itself to match the client's requirements.  This means that you can create one website for all of your clients, with much less overhead than creating device-specific templates.  RWD removes the need to zoom in and out of websites (a very un-app-like quality).  Furthermore, content is spaced to fill (but not overrun) the screen.</p>
+          </section>
+        </section>
+        <!-- Another symantic structure here? -->
+        <section>
+          <h2>Additional resources:</h2>
+            <ul>
+              <li><a href="http://www.visionmobile.com/blog/2013/07/web-sites-vs-web-apps-what-the-experts-think/">What is an App?</a></li>
+              <li><a href="http://mashable.com/2010/08/18/mobile-web-app-frameworks/">HOW TO: Make Youre Mobile Websites Act More Like Native Apps</a></li>
+              <li><a href="http://boagworld.com/mobile-web/mobile-app-vs-mobile-website-design/">4 Strategies for Dealing with Mobile on Your Website</a></li>
+            </ul>
+        </section>
+      </article>
+    </div> <!-- content-body -->
+    <!-- TODO Insert javascript script include here -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <footer>
+      <img src="images/MFSignature.png" alt="SwingChef" />
+    </footer>
+  </body>
+</html>

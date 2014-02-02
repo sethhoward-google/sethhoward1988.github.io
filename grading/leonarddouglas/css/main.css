@@ -1,0 +1,222 @@
+
+
+#asci {
+    font-weight:900;
+    font-size: 100%;
+        
+}
+p{
+    font-family: source-sans-pro, sans-serif;
+    font-size: 105%;
+}
+#monopoly{
+    height: 25%;
+    width: 25%;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        
+}
+#list{
+position: relative; 
+}
+
+#item{
+position: absolute; 
+   top: 70px; 
+   text-decoration: none;
+   left: 350px; 
+   width: 100%; 
+   font-size: 18px;
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v4/EFpQQyG9GqCrobXxL-KRMXbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+}
+
+a{
+    text-decoration: none;
+    line-height: inherit;
+}
+
+h2{
+    line-height: 48px;
+    font-family: 'Droid Sans', Georgia, Times, 'Times New Roman', serif;;
+    display: block;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+    color: rgb(66, 66, 66);
+    font-size: 2.000em;
+    margin-bottom: 0.500em;
+}
+#header{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(104, 104, 104);
+    direction: ltr;
+    display: block;
+    font-family: source-sans-pro, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 62px;
+    line-height: 62px;
+    margin-bottom: 0px;
+    margin-left: 54px;
+    margin-right: 354px;
+    margin-top: 0px;
+    max-width: 1000px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    width: 1000px;
+}
+.nav-links{
+    float: left;
+        font-style: normal;
+        text-decoration: none;
+
+}
+
+.nav a {
+    color: #000;
+font-size: 14px;
+margin: 0 0 0 25px;
+}
+
+
+#hero-wrapper {
+    background: #2fa7fc; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMmZhN2ZjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMmZhN2ZjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjg4ZWRmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI4OGVkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg,  #2fa7fc 0%, #2fa7fc 50%, #288edf 50%, #288edf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#2fa7fc), color-stop(50%,#2fa7fc), color-stop(50%,#288edf), color-stop(100%,#288edf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #2fa7fc 0%,#2fa7fc 50%,#288edf 50%,#288edf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #2fa7fc 0%,#2fa7fc 50%,#288edf 50%,#288edf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #2fa7fc 0%,#2fa7fc 50%,#288edf 50%,#288edf 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #2fa7fc 0%,#2fa7fc 50%,#288edf 50%,#288edf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa7fc', endColorstr='#288edf',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+    margin: 62px 0 0;
+}
+
+#hero {
+    color: #fff;
+    height: 345px;
+}
+
+#hero h1 {
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+    padding: 1.5em 0 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+#hero p {
+    font-size: 1.2em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+    width: 320px;
+}
+
+.no-bg-img p {
+    width: 30em !important;
+    max-width: 95% !important;
+}
+
+#hero-cta-button {
+    background: #2D2E30;
+    color: #8fddff;
+}
+
+#hero-cta-button:active {
+    background: #000;
+}
+
+.button span {
+    color: #fff;
+    display: block;
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 0.3em 0 0;
+}
+
+#other-downloads {
+    color: #7dfffa;
+    font-size: .7em;
+    font-weight: 600;
+    padding-left: 1.4em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#sub-hero-wrapper {
+    background: #2fa7fc;
+    -webkit-box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.12);
+    padding: 40px 0;
+}
+
+#sub-hero,
+#sub-hero h2,
+#sub-hero p,
+#sub-hero li {
+    color: #fff;
+}
+
+#sub-hero h2 {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 0.2em;
+}
+
+#sub-hero a {
+    color: #7dfffa;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.large-12{
+    position: relative;
+    width: 100%;
+}
+
+div.nav.clearfix{
+    -webkit-transform-origin: 0px 0px;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+}
+
+.row {
+    padding: 0 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+}
+
+#header-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    height: 62px;
+    left: 0;
+    line-height: 62px;    
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 98;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);    
+}
+#item .l{
+    font-size: 22px;
+    font-family: Droid Sans;
+    color: rgb(66, 66, 66)
+}

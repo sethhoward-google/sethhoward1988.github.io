@@ -1,0 +1,139 @@
+<!--
+TODO:
+
+NOTES:
+The section element represents a generic document or application section…The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.
+http://html5doctor.com/the-section-element/
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Brian's Website</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <meta content='text/html; charset=UTF-8'/>
+    </head>
+    <body>
+
+
+    	<div id="tabs">
+    		<nav class="tabs">
+				<a href="#home">Home</a>
+				<section id="home" class="tabs-content">
+					<h1>
+						Welcome to my site
+					</h1>
+					<img src="css/img/2009-03-23 10.49.05.jpg" />
+					<img src="css/img/2011-07-08 16.46.01.jpg" />
+					<img src="css/img/2012-08-11 01.29.50.jpg" />
+
+					<p>
+					I am a first year MISM student.  I currently work for Anglepoint consulting.  My interests include web programming and mobile development. 
+					
+					</p>
+					<p>
+					My favorite language to program in as of late is Google Apps Script.  There are a lot of really cool things you can do if you already use a lot of Google products, like Gmail, Google Docs, or Google Calendar.
+					One script I wrote iterated through many google spreadsheets to make the same change to all of them.  I did this for a friend that is leading a group of interns and needed spreadsheets to track their progress.  He wanted the formula in a specific cell changed, and it would have meant opening and changing many many cells by hand.  This was a lot easier, and more fun too.
+					</p> 
+					<p>
+					I also really enjoy soccer and really any other sport.  Except basketball, I'm really bad at basketball. 
+					</p>
+
+				</section>
+				<a href="#guide">Guide to REST</a>
+				<section id="guide" class="tabs-content">
+					<h1>
+						What is a web service?
+					</h1>
+
+					<section>
+						<p>
+						A program that runs on a server to provide information or processing to a third party.  An example of a web service might be a program that converts currency when given an amount and a beginning and ending currency.  To be a web service, this program would run on a server and would be accessed programatically by another application.
+						</p>
+					</section>
+					
+					
+					<h2>
+						What is a RESTful web service?
+					</h2>
+					<p>
+					REST is a standard that dictates how a web service should act.  REST stands for Representational State Transfer.  The main principles of REST are:
+					</p>
+					<ul>
+						<li>All resources are identified uniquely</li>
+						<li>Link resources together</li>
+						<li>Use of known methods</li>
+						<li>Spcify the format of results</li>
+						<li>stateless communication</li>
+
+					</ul>
+					<h2>
+						HTTP methods
+					</h2>
+					<img id="restImage" src="css/img/four_terms.jpg"></img>
+					<p class="citation">http://www.w3.org/2005/Talks/1115-hh-k-ecows/#(1)</p>
+						<ul>
+						<li>GET - retrieve data from server</li>
+						<li>POST - create or update data on server</li>
+						<li>PUT - like post, except stateless</li>
+						<li>DELETE - removes data from server</li>
+						</ul>
+
+					<h2>
+						An example web service:
+					</h2>
+					
+
+					<!-- NOT MINE, PASTED AS AN EXAMPLE FROM W3  -->
+					<form action='http://www.w3schools.com/webservices/tempconvert.asmx/FahrenheitToCelsius' method="post" target="_blank">
+					<table>
+					  <tr>
+					    <td>Fahrenheit to Celsius:</td>
+					    <td>
+					    <input class="frmInput" type="text" size="30" name="Fahrenheit">
+					    </td>
+					  </tr>
+					  <tr>
+					    <td></td>
+					    <td align="right">
+					     <input type="submit" value="Submit" class="button">
+					     </td>
+					  </tr>
+					</table>
+					</form>
+
+					<form action='http://www.w3schools.com/webservices/tempconvert.asmx/CelsiusToFahrenheit'
+					method="post" target="_blank">
+					<table>
+					  <tr>
+					    <td>Celsius to Fahrenheit:</td>
+					    <td>
+					    <input class="frmInput" type="text" size="30" name="Celsius">
+					    </td>
+					  </tr>
+					  <tr>
+					    <td></td>
+					    <td align="right">
+					    <input type="submit" value="Submit" class="button">
+					    </td>
+					  </tr>
+					</table>
+					</form>
+					<!-- NOT MINE -->
+					<p class="citation">An example from W3 Schools: http://www.w3schools.com/webservices/ws_use.asp</p>
+					<h2>
+						Sources:
+					</h2>
+					<ul>
+						<li>https://spring.io/understanding/REST</li>
+						<li>http://www.infoq.com/articles/rest-introduction</li>
+						<li>http://www.w3schools.com/webservices</li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+    </body>
+</html>
