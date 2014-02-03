@@ -1,0 +1,55 @@
+
+body {
+    font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    background-color: #f2f2f2;
+
+}
+
+.app {
+    text-align: center;
+}
+
+#content {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.movie {
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.movie h1 {
+    line-height: 30px;
+    color: #444;
+}
+
+.movie:nth-child(3n-7) {
+    margin:0px 15px 15px 15px;
+}
+
+.movie img {
+    border-radius: 3px;
+    max-width: 200px;
+}
+
+.movie p {
+    text-align: left;
+}
+
+input {
+    color: orange;
+    width: 300px;
+    margin: 50px auto;
+    padding-left: 15px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
