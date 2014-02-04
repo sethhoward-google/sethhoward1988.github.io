@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MySQL Ajax Example</title>
+	<meta name="author" content="Matt Winn" />
+	<meta name="description" content="A MySQL Ajax example" />
+	<meta charset="UTF-8" />
+        <link href="css/styles.css" rel="stylesheet" />
+	<base href="C:/Users/Mateo/Documents/IS542/Project1/" />
+    </head>
+    <body>
+	<div class="content">
+	    <header>
+		<ul class="menu_bar">
+		    <li><img src="images/bar_logo_mysql.png"</li>
+		    <li><a href="index.html">Home</a></li>
+		    <li>
+			<a href="form_example.html">Examples</a>
+			<ul class="submenu_bar">
+			    <li><a href="form_example.html">Form Example</a></li>
+			    <li><a href="ajax_example.html">Ajax Example</a></li>
+			</ul>
+		    </li>
+		    <li><a href="aboutme.html">About</a></li>
+		</ul>
+	    </header>
+	    <div class="title">
+		<h1>Ajax Example</h1>
+	    </div>
+	    <!--This section introduces the purpose of the page-->
+	    <section>
+		<p>
+		MySQL as a relational database is great at giving any website back-end functionality.
+		This means that users of your website can submit information, and your website will be able to store and
+		manipulate that information to do what you need it to. This example is particularly interesting because
+		it will show the ability to submit and then retrieve what you've submitted instantaneously through the
+		use of MySQL and Ajax.
+		</p>
+	    </section>
+	    <section>
+		Start off by submitting some product names to work with
+		<form method="post" action="Ajax_example.html">
+		    <p><label for="product1">Product 1 Name:<input id="product1" name="product1"/></label></p>
+		    <p><label for="product2">Product 2 Name: <input id="product2" name="product2"/></label></p>
+		    <p><label for="product3">Product 3 Name: <input id="product3" name="product3"/></label></p>
+		    <p><label for="product4">Product 4 Name: <input id="product4" name="product4"/></label></p>
+		    <button>Submit Product Names</button>
+		</form>
+	    </secion>
+	    <section>
+		<p>After you have submitted some product names, start typing in the following box and see what happens!</p>
+		<form method="post">
+		    <input type="text" id="search" disabled=true/>
+		</form>
+		<p>Isn't that crazy awesome???</p>
+	    </section>
+	</div>
+    </body>
+</html>

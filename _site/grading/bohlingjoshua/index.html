@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Backbone.JS</title>
+        <meta name="author" content="Joshua Bohling"/>
+        <meta name="description" content="Backbone.js Overview"/>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'> 
+    </head>
+    <body>
+        <div id="container">
+            <header id="site-header">
+                <hgroup id="logo-banner">
+                    <h1>Web Revealed</h1>
+                </hgroup>
+                <nav class="main-nav" id="top-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Articles</a></li>
+                        <li><a href="about/index.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            
+            <article>
+                <img class="left-decorate" src="img/backbone.png">
+                <header class="story-header">
+                    <hgroup>
+                        <h1>Backbone.js</h1>
+                        <h2>An article by Joshua Bohling</h2>
+                    </hgroup>
+                </header>
+                <section id="main-story">
+                    <!--<aside>
+                        <h1>External Links</h1>
+                        <section>
+                            <ul>
+                                <li><a href="http://backbonetutorials.com">Backbone Tutorials</a></li>
+                                <li><a href="http://arturadib.com/hello-backbonejs/">Hello Backbone</a></li>
+                                <li><a href="http://liquidmedia.org/blog/2011/01/backbone-js-part-1/">Intro to Backbone: Part 1</a></li>
+                                <li><a href="http://liquidmedia.ca/blog/2011/01/an-intro-to-backbone-js-part-2-controllers-and-views/">Intro to Backbone: Part 2</a></li>
+                            </ul>
+                        </section>
+                    </aside>-->
+                    <p>The recent surge in the popularity of web applications has left many web developers scratching their heads about how to best tackle the challenges of data delivery and display.  Backbone.js is web application structuring framework that provides developers with a simple, flexible, and robust MVC framework.  Backbone weighs in at only 4kb, and yet maintains the type of flexibility developers yearn for but is so often compromised with canned MVC frameworks.   The “MVC” of backbone originally stood for Model, View, and Collection, but Backbone now includes controllers as well.  This leaves us with the four major “root” classes in Backbone:</p>
+                        <ul>
+                            <li>Model</li>
+                            <li>Collection</li>
+                            <li>View</li>
+                            <li>Controller</li>
+                        </ul>
+                    <hr />
+                    <section>
+                        <header>
+                            <h1>Model</h1>
+                        </header>
+                        <p>A model can be thought of much like an Object in languages like Java.  An excerpt from the Backbone introduction tells us:</p>
+                        <blockquote>
+                             Models are the heart of any JavaScript application, containing the interactive data as well as a large part of the logic surrounding it: conversions, validations, computed properties, and access control.   
+                        </blockquote>
+                        <p>Simply put, a model is a baseline guide of the attributes that compose an object.  Let’s take a car, for example, and see how we’d create first the model, “car,” with its attributes:</p>
+                        
+                        <code>
+    <pre>
+        var Car = Backbone.Model.extend({
+            defaults: {
+                make: 'null',
+                model: 'null',
+                trim: 'null',
+                year: 1970,
+                color: 'grey'
+            }
+        });
+    </pre>
+                        </code>
+                        
+                        <p>The above code simply created the “car” model, with its default values and baseline attributes.  Cars all have makes, models, years, trims, and colors.  Our car model includes those attributes so that when we want to create a specific car, we can include those attributes:</p>            
+                        <code>
+    <pre>
+        var MyDreamCar = new Car({
+            make: 'Buick',
+            model: 'Regal',
+            trim: 'GS',
+            year: 2014,
+            color: 'Candy Apple Red'
+        });
+    </pre>
+                        </code>
+                        <p>As you can see, we’ve created a new car based off the “car” model.  This car has a make, model, year, trim, and color assigned.  We can retrieve or change those values at any time by calling the getters and setters for the object, which Backbone created automatically:</p>
+                        <code>
+    <pre>
+        var trim = MyDreamCar.get("trim");
+        MyDreamCar.set({color: 'Sharkskin Grey'});
+    </pre>
+                        </code>
+                        <p>The car only exists in the browser’s memory at this point.  We can now make the changes permanent by calling the save() function on the object.  Backbone’s save() function will intelligently determine whether to submit a POST or a PUT, depending on the preexistence of the object on the server.</p>
+                    </section>
+                    <hr />
+                    <section>
+                        <header>
+                            <h1>Collection</h1>
+                        </header>
+                        <p>As the name implies, collections are groups of models (objects) of the same type.  Rarely will your application only store one instance of a model type, and so it stands to reason that Backbone should include a way to handle multiple objects of the same type.  Collections are created by specifying the model type which they will contain.  For example:</p>
+                        <code>
+    <pre>
+        var Cars = Backbone.Collection.extend({
+            model : Car,
+            url : "/cars"
+        });
+        var cars = new Cars;
+    
+        cars.fetch();
+    </pre>
+                        </code>
+                        <p>If you know you’ll be needing a collection of cars, you can dynamically populate the entire collection rather than inserting each car by hand using the fetch() method on the collection, once you’ve specified where the collection can retrieve itself:</p>
+                    </section>
+                    <hr />
+                    <section>
+                        <header>
+                            <h1>View</h1>
+                        </header>
+                        <p>Views in backbone are not strictly views in the traditional sense.  The view can listen to events which are created by your models and collections, or which are brought about by activity in the DOM.  Views also serve to display and indicate the application’s data model to users.  Views are created similarly to the previous two classes described:</p>
+                        <code>
+    <pre>
+        CarView = Backbone.View.extend({
+            tagName: "div",
+            className: "car",
+    </pre>
+                        </code>
+                        <p>The render functions can be either purely javascript or can utilize other frameworks like jquery.  For simplicity, we’ll demonstrate the render function using jQuery:</p>
+                        <code>
+    <pre>
+        render: function(){
+            $(this.el).html(this.model.get('make' + ' ' + 'model' + ' ' + 'trim'));
+        });
+    </pre>
+                        </code>
+                        <p>Obviously, large web-apps utilize dozens of views, and quite frankly, can become unwieldy very quickly when deploying many similar pages.  In these situations, templating solutions like Underscore.JS can be used to create templates available for reuse later.</p>
+                        <p>Views listen to events to drive manipulation of the view itself.  DOM event listeners/functions can be specified in the creating of the view:</p>
+                        <code>
+    <pre>
+        events: {  
+            'click .name': 'handleClick'  
+        },  
+           
+        handleClick: function(){  
+            alert('I got clicked');
+        }
+    </pre>
+                        </code>
+                        <p>This is a simple enough approach to DOM events.  However, the true beauty of Backbone is its ability to bind models and collections together:</p>
+                        <code>
+    <pre>
+        CarView= Backbone.View.extend({  
+            initialize: function (args) {  
+                    _.bindAll(this, 'changeMake');  
+                      this.model.bind('change:make', this.changeMake);  
+            } 
+        });
+    </pre>
+                        </code>
+                        <p>By placing the binding code in the <em>initialize</em> function, we’re instantly binding the view to the model.  Underscore allows us to use the <em>bindAll</em> function to utilize “this” in a persistent manner.  Essentially, our code allows us to listen for a change in the make attribute, and then call the <em>changeMake</em> function when the make is actually changed.</p>
+                    </section>
+                    <hr />
+                    <section>
+                        <header>
+                            <h1>Controller</h1>
+                        </header>
+                        <p>A controller in Backbone essentially allows for the creation of stateful applications that can be returned to later on using a friendly URL string.  Similar to routing (found in MVC), controllers allow us to direct traffic flow in the browser without passing long query strings in the URL:</p>
+                        <code>
+    <pre>
+        var Hashbangs = Backbone.Controller.extend({  
+            routes: {  
+                "!/": "root",  
+                "!/makes": "makes",  
+            },  
+            root: function() {  
+                // This function should render the views 
+            },  
+              
+            makes: function() {  
+                // Re-render views to show a collection of makes 
+            }
+        }); 
+    </pre>
+                        </code>
+                        <p>A common user frustration in JS-heavy web applications is the failure of the back button to perform as expected.  Backbone can take care of that for you:</p>
+                        <code>
+    <pre>
+        Backbone.history.start();
+    </pre>
+                        </code>
+                        <p>Backbone monitors your code and works with the routes you create to make your app bookmarkable.</p>
+                    </section>
+                    <hr />
+                    <section>
+                        <header>
+                            <h1>Summary</h1>
+                        </header>
+                        <p>Backbone.JS is a powerfully flexible tool for implementing MVC in your JavaScript web apps.  Using Backbone allows you to simplify your view code and maintain a level of modularity that keeps your web apps clean and streamlined, and allows future developers to hit the ground running when they encounter your application.</p>
+                    </section>
+                </section>
+            </article>
+            
+            
+            <footer>
+                <nav class="main-nav" id="bottom-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Articles</a></li>
+                        <li><a href="about/index.html">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Django, an HTML5 example</title>
+		<meta name="author" content="A. Frehner" />
+		<meta name="description" content="Explaining Django, using HTML5" />
+		<meta charset="utf-8">
+
+		<!-- silly favicon -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+		
+		<!-- for modernizr -->
+		<script src="js/modernizr.js"></script>
+		
+		<!-- for jquery -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+
+		<!-- <link href="css/index.css" rel="stylesheet" type="text/css"> -->
+
+		<!-- for the font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<!-- for less css -->
+		<link rel="stylesheet/less" type="text/css" href="css/index.less" />
+		<script src="js/less-1.6.1.min.js" type="text/javascript"></script>
+
+	</head>
+	<body>
+		<nav>
+			<h1>Navigation</h1>
+			<ul>
+				<li class="currentPage">
+					<a href="index.html">Django</a>
+				</li>
+				<li>
+					<a href="jqueryPlaying.html">Playing w/ jQuery</a> 
+				</li>
+			</ul>
+		</nav>
+		<header class="pageHeader">
+			<h1>Django: A Python MTV Framework</h1>
+			<h2>A. Frehner</h2>
+		</header>
+		<section>
+			<header>
+				<h1>Where did Django come from?</h1>
+			</header>
+			<p>
+				I tried to write something, but decided that Wikipedia had stated it more clearly and concisely than I could.  Here's what Wikipedia says:
+			</p>
+			<blockquote>
+				<p>
+					Django was born in the fall of 2003, when the web programmers at the Lawrence Journal-World newspaper, Adrian Holovaty and Simon Willison, began using Python to build applications. It was released publicly under a BSD license in July 2005. The framework was named after guitarist Django Reinhardt.
+				</p>
+				<p>
+					In June 2008, it was announced that a newly formed Django Software Foundation (DSF) would maintain Django in the future.
+				</p>
+				<!-- <footer> -->
+					<cite>
+						<a href="http://en.wikipedia.org/wiki/Django_(web_framework)#History">Wikipedia Article on Django</a>
+					</cite>
+				<!-- </footer>				 -->
+			</blockquote>
+			<p>
+				Also, MTV stands for "model, template, view", which is the Django interpretaion of MVC (model, view, controller).  In Django, the model is used for database interactions, the view is used for business logic, and the template is a dynamic html document intermixed with the template language. 
+			</p>
+		</section>
+		<section>
+			<header>
+				<h1>What are some good things about Django?</h1>
+			</header>
+				<div class="details">
+					<h3>
+						Database interactions in Python
+					</h3>
+					<p>
+						Once you lay out your database in Django, it allows you to do CRUD functions without switching languages.  For example, if you have a person object named John, you can simply write:
+					<p>
+						<code>
+							John.save()
+						</code>
+					</p>
+					<p>
+						and that object is now saved in the database.  Now, let's say we need to change John's address (he moved).  Easy enough:
+					</p>
+					
+					<p>
+					<code>
+						John.address = "111 W"
+					</code>
+					<br>
+					<code>
+						John.save()
+					</code>						
+					</p>
+					<p>
+						Look at that.  You don't have to worry about UPDATE or INSERT or anything; you just "save" the object and Django handles that for you.  But don't worry; if you need to write pure SQL, you still can, too.
+					</p>
+					
+				</p>
+			</div>
+			<div class="details">
+				<h3>
+					Automatic, production-ready admin interface
+				</h3>
+				<p>
+					The admin interface is generally just as large and time consuming to build as the public-facing side of your webpage.  Well, fret no more: Django <em> automatically </em> builds your admin site, so you don't need to worry about that.
+				</p>
+			</div>
+			<div class="details">
+				<h3>
+					Clean URLs
+				</h3>
+				<p>
+					Ever visit a website that has URLs with random characters, numbers, and symbols in it?  Django makes it so those days are over: your pages will have easy-to-read URLs without any trailing markers like .php or .asp .
+				</p>
+			</div>
+			<div class="details">
+				<h3>
+					Using templates: a great DRY principle
+				</h3>
+				<p>
+					DRY stands for <em>Don't Repeat Yourself</em>.  Almost nothing is worse than doing the same thing over and over again.  Django's templates allow you to build a base look and layout for your webpage, and then dynamically fill it with content on a per-page basis.  This way, you don't have to re-do the html over and over again for each page that you build.  A fair warning, however; the language used for the template system is <em>not</em> Python, though it is very simple to learn.
+				</p>
+			</div>
+		</section>
+		<section>
+			<header>
+				<h1>What are some sites that use Django?</h1>
+			</header>
+			<ul>
+				<li>Disqus</li>
+				<li>Instagram</li>
+				<li>Mozilla</li>
+				<li>OpenStack</li>
+				<li>Pinterest</li>
+				<li>and more</li>
+			</ul>
+		</section>
+		<section>
+			<header>
+				<h1>
+					This program brought to you by the letter Dj, and by:
+				</h1>
+			</header>
+			<p>
+				The majority of this information was summarized from <a href="https://www.djangoproject.com">djangoproject.com</a>, which is one of the best framework webpages I've seen.
+			</p>
+		</section>
+		<footer>
+			This page was built to showcase some new HTML5 tags, which means that some browsers may not display this page correctly. 
+		</footer>
+
+		<script type="text/javascript">
+			//the following doesn't work because this version of modernizr doesn't recognize the details tag. I'm keeping it here for my future reference.
+			// Modernizr.load({
+			// 	test: Modernizr.details,
+			// 	nope: 'js/details.js'
+			// });
+		</script>
+	</body>
+</html>

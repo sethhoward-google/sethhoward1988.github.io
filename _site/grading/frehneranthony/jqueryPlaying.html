@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Django, an HTML5 example</title>
+		<meta name="author" content="A. Frehner" />
+		<meta name="description" content="Explaining Django, using HTML5" />
+		<meta charset="utf-8">
+
+		<!-- silly favicon -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+		
+		<!-- for modernizr -->
+		<script src="js/modernizr.js"></script>
+		
+		<!-- for jquery -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+
+		<!-- <link href="css/index.css" rel="stylesheet" type="text/css"> -->
+
+		<!-- for the font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<!-- for less css -->
+		<link rel="stylesheet/less" type="text/css" href="css/index.less" />
+		<script src="js/less-1.6.1.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<h1>Navigation</h1>
+			<ul>
+				<li>
+					<a href="index.html">Django</a>
+				</li>
+				<li class="currentPage">
+					<a href="jqueryPlaying.html">Playing w/ jQuery</a> 
+				</li>
+			</ul>
+		</nav>
+		<header class="pageHeader">
+			<h1>Doing silly things with jQuery</h1>
+			<h2>A. Frehner</h2>
+		</header>
+		<section class="toggleIt">
+			<header>
+				<h1>Toggle1 (click me)</h1>
+			</header>
+			<section>
+				<p>
+					I'm not quite sure what I want to do this this area.  Maybe I'll try to do some fancy jQuery stuff here just for fun.
+				</p>
+			</section>
+		</section>
+		<section class="toggleIt">
+			<header>
+				<h1>Toggle2 (click me)</h1>
+			</header>
+			<section>
+				<p>
+					Look, another random portion of text.  Enjoy!	
+				</p>
+			</section>
+		</section>
+		<section class="toggleIt">
+			<header>
+				<h1>Toggle3 (don't click the others; click ME!)</h1>
+			</header>
+			<section>
+				<p>
+					It's going up and down and up and down.
+				</p>
+			</section>
+		</section>
+		<hr>
+		<section>
+			<header>
+				<h1>Now for a little game</h1>
+			</header>
+			<section>
+				<p>
+					First of all, these are radio buttons!  Crazy, huh?  They sure don't look like it.
+				</p>
+				<p>
+					Anyway, please try to select the third "radio" button.  Enjoy!
+				</p>					
+				<p>
+					<input type="radio" name="radioPlay" class="radioPlay" value="1" id="r1"></input><label for="r1">Number 1</label>
+					<input type="radio" name="radioPlay" class="radioPlay" value="2" id="r2"></input><label for="r2">Number 2</label>
+					<input type="radio" name="radioPlay" class="radioPlay" value="3" id="r3"></input><label for="r3">Number 3</label>
+					<input type="radio" name="radioPlay" class="radioPlay" value="4" id="r4"></input><label for="r4">Number 4</label>
+					<input type="radio" name="radioPlay" class="radioPlay" value="5" id="r5"></input><label for="r5">Number 5</label>
+				</p>
+			</section>
+		</section>
+		<footer>
+			This page was built to showcase some new HTML5 tags, which means that some browsers may not display this page correctly. 
+		</footer>
+		<script src="js/jqueryplaying.js"></script>
+	</body>
+</html>

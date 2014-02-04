@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Backbone Intro</title>
+    <!--syntax highligher-->
+   <script type="text/javascript" src="prettify.js"></script>
+   <link href="prettify.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="less.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <h1>Backbone Intro</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Information</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <ul>
+            <li><a href="#intro-link">Introduction and Setup</a></li>
+            <li><a href="#components-link">Components</a>
+                <ul>
+                    <li><a href="#models-link">Models</a></li>
+                    <li><a href="#collections-link">Collections</a></li>
+                    <li><a href="#views-link">Views</a></li>
+                    <li><a href="#routers-link">Routers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div id="content">
+        <section>
+            <h2><a id="intro-link">Introduction and Setup</a></h2>
+            <p>
+                Backbone is JavaScript framework.  It was created in an effort to help JavaScript developers organize their pre.  It is built to be used on single-page applications, which are applications that, after the intial page load, don't reload the webpage.  Backbone, by itself, is intened to have the all the pre written on the same page.  If you want to separate the various components into their own JavaScript files you have to use an <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a> library like <a href="http://requirejs.org">Require.js</a>
+            </p>
+            <p>
+                To add Backbone to your page you need to download the latest development versions of <a href="http://backbonejs.org">Backbone</a>, <a href="http://underscorejs.org">Underscore</a>, and <a href="http://jquery.com/download/">JQuery.</a>  You'll need to create separate JavaScript files in your website's directory for each of the libraries, and copy the pre from the library's download site into the respective JavaScript file.  Then you will need to references these libraries on your index.html file with script tags <pre class="prettyprint lang-js"> &lt;script src="js/jquery-min.js"&gt;&lt;/script&gt;</pre>.  This is usually done at the bottom of the webpage and it needs to go in the following order:
+                <ol>
+                    <li>JQuery</li>
+                    <li>Underscore</li>
+                    <li>Backbone</li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <h2><a id="components-link">Components</a></h2>
+            <p> 
+                There are 4 main components to Backbone:
+                <ul>
+                    <li><a href="#models-link">Models</a></li>
+                    <li><a href="#collections-link">Collections</a></li>
+                    <li><a href="#views-link">Views</a></li>
+                    <li><a href="#routers-link">Routers</a></li>
+                </ul> 
+                Each backbone component is created with the following pre: 
+                
+                <pre class="prettyprint lang-js">Backbone.<em>ComponentName</em>.extend({<em>Component attributes and properties</em>});</pre>   
+                
+            </p>
+            <h3><a id="models-link">Models</a></h3>
+            <p>
+                Models in Backbone are created for the purpose of holding data.  They are essentially business objects, built for the intent of holding information about a specific entity.  It is created by writing the pre:
+                
+                <pre class="prettyprint lang-js">Backbone.Model.extend();</pre>
+                
+                Backbone models can obtain their data in several different ways:
+                <ul>
+                    <li>
+                        They can have the data put in statically: 
+                        <pre class="prettyprint lang-js">
+var PersonModel = Backbone.Model.Extend({name:"Bob",
+    job:"Construction worker",
+    favoriteColor:"Yellow"
+});</pre>
+                            
+                    </li>
+                    <li>
+                        They can have data pulled in via a REST call to the server
+                        <pre class="prettyprint lang-js">
+var PersonModel = Backbone.Model.Extend({
+    url:'../api/person'
+});</pre>
+                    </li>
+                </ul>  
+            </p>
+            <h3><a id="collections-link">Collections</a></h3>
+            <p>
+                Collections in Backbone are groups of multiple models.  They are created by writing:
+                
+                <pre class="prettyprint lang-js">Backbone.Collection.extend();</pre>
+                
+                To specify what kind of model should go into a collection you can override the model attribute of a collection:
+                
+                <pre class="prettyprint lang-js">
+var Family = Backbone.Collection.extend({
+    model:Person
+});</pre>
+                You can then load models into a collection by passing the collection an array of models:
+                
+                <pre class="prettyprint lang-js">
+var Family = new Family([Person1,Person2,Person3]);</pre>
+            </p>
+            <h3><a id="views-link">Views</a></h3>
+            <p>
+                Views are Backbone entities used for displaying data.  By default they rely on the Underscore.js templating system, but you can use any templating library you want.  To create a view you use the pre:
+                
+                <pre class="prettyprint lang-js">
+Backbone.View.extend();</pre>
+                Each Backbone view has a property called "el" that specifies which element in the DOM it is connected to.  If nothing is specified for the el property, an empty div will be created for it.  When using an AMD librarly like Require.js with Backbone it isn't always good practice to connect a view directly to the DOM through the el property.  This is because it increases coupling, thus making it harder to manage pre.  An example of adding the "el" attribute to a view would look like:
+                
+                <pre class="prettyprint lang-js">
+var familyView = Backbone.View.extend({
+    el:"#mainContent"
+});</pre>
+            </p>
+            <p>
+                Backbone views are commonly connected with html templates.  The default templating language for Backbone is Underscore, but you can use almost any JavaScript templating language you want.  To load a template in Underscore you must call the <pre class="prettyprint lang-js">_.template(templateHtml,data)</pre> function and pass in a reference to where the template contents can be found as well as any data needed for the template.
+                
+                <pre class="prettyprint lang-js">
+var familyView = Backbone.View.extend({
+    initialize:function(){
+        this.render();
+    },
+    render:function(){
+        template = _.template($('#templateID').html(),personModel.toJSON());
+        this.$el.html(template);
+    }
+});</pre>
+            </p>
+            <h3><a id="routers-link">Routers</a></h3>
+            <p>
+                Backbone routers are used to control what happens on different urls.  A router is created by using:
+                
+                <pre class="prettyprint lang-js">
+Backbone.Router.extend();</pre>
+                To establish what functions should be connected to which urls, the <code>routes</code> attribute needs to be added to the router.
+                
+                <pre class="prettyprint lang-js">
+var Router = Backbone.Router.extend({
+    routes:{
+        'people':'showPeople',
+        'people/:id':'showPerson'
+    },
+    showPeople:function(){
+
+    },
+    showPerson:function(id){
+
+    }
+});</pre>
+                Backbone routers allow urls to be dynamic by including <em>:params</em> and/or <em>*splats</em>.  A <em>:param</em> will match any element that is between two slashes, such as <pre class="prettyprint lang-js">person/:id/get</pre>.  The param <em>:id</em> will be passed into the function as a parameter connected to that route in the <em>routes</em>attribute.  
+            </p>
+            <p>
+                A <em>*splat</em> will match any and all elements in the url path.  This means that <pre class="prettyprint lang-js">/people/*path</pre> could be used to grab any url components after <pre class="prettyprint lang-js">/people/</pre>.  So <em>http://wwww.myapp.com/#/people/get/people/from/the/database</em> would return <em>get/people/from/the/database</em> for the *path splat.
+            </p>
+        </section>
+    </div>
+    <footer>
+    </footer>
+    <script type="text/javascript">
+         prettyPrint();
+    </script>
+</body>
+</html>

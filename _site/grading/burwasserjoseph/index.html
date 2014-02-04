@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ruby Info Site</title>
+		<link href="css/styles.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="css/img/rubytest.png" type="image/x-icon" />
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<section class="content">
+			<header>
+				<img class="headerpic" src="css/img/rubylogo.png"/>
+				<h2>Ruby Analysis</h2>
+			</header>
+			
+			<nav>
+				<ul>
+					<li><a href="http://en.wikibooks.org/wiki/Ruby_Programming">About Ruby</a></li>
+					<li><a href="https://www.ruby-lang.org/en/">Download</a></li>
+					<li><a href="https://www.ruby-lang.org/en/community/mailing-lists/">Join Ruby-Talk</a></li>
+					<li><a href="rails.html">Ruby on Rails</a></li> <!--Make this font bigger-->
+					
+				</ul>
+			</nav>
+
+
+		
+		
+		
+
+			<section class="mainbody">
+				<section class="guidecontents">
+					<div class="content-right">
+	                    <div class="block">
+	                        <img src="css/img/redplussign.png" /> <!--Find images-->
+	                        <h3>Benefits</h3>
+	                        <ul>
+	                            <li>Consistency</li>
+	                            <li>Simplicity</li>
+	                            <li>Flexibility</li>   
+	                        </ul>
+	                        
+	                    </div>
+	                    <div class="block">
+	                        <img src="css/img/rubytest.png" />
+	                        <h3>Features</h3>
+	                        <ul>
+	                            <li>Exception Handling</li>
+	                            <li>Object-Oriented Architecture</li>
+	                            <li>Interactive Shell</li>
+	                            
+	                        </ul>
+	                    </div>
+	                    <div class="block">
+	                        <img src="css/img/minusred.png" />
+	                        <h3>Shortcomings</h3>
+	                        <ul>
+	                            <li>Scalability</li>
+	                            <li>Guinea Pig Status</li>
+	                            <li>Dynamic Typing</li>
+	                            <li>Error Capture</li>
+	                        </ul>
+	                    </div>
+                	</div>
+				</section>	
+				<h3>Origin</h3>
+				
+				
+					
+				<section class="introd">
+					<img  src="css/img/matsumoto.jpg"/>
+					<p>Ruby was created by Yukihiro Matz Matsumoto in 1993 and released to the public in 1995. Matsumoto later described his methodology succinctly by saying: <blockquote>"I wanted a scripting language that was more powerful than Perl, and more object-oriented than Python. I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language."</blockquote>
+					<p> Ruby combines features from Perl, Smalltalk, Eiffel, Ada, Lisp, and Python. As time went on, Ruby has gained a significant following and is now one of the most popular coding languages today.</p><!-- Add in that forum thing from the book for the quotation-->
+					<h3>Everything is an object</h3>
+				
+				</section>
+				<div class="objectPar">
+					<p>In ruby, even strings, numbers, and booleans are objects. Properties and actions can be given to any part of the programming code. . Ruby&#39s pure object-oriented approach even applies to numbers-as shown in the following line of code: <img id="printExample" src="css/img/printExample.png"/></p><!--10.times { print "Everything is an object in ruby!!!"}-->
+				</div>
+				
+				<h3>Ruby Benefits</h3>
+				
+				<ul class="vantagelist">
+					<li> 
+						<em>Consistency</em>
+							-Ruby uses a small set of rules to govern the whole language. It strives to maintain intuitive coding principles while avoiding oversimplification.	
+				    </li>
+				    
+				    <li>
+				    	<em>Simplicity</em>
+				    		-The ruby language has the ability to execute several functions from  a couple lines of code. In addition to this, the language is easy to read.     
+				    </li>
+				   
+				    <li>
+				    	<img id="sumExample" src="css/img/rubySumExample.png"  />
+				    	Here, the inject method is used to iterate through and sum up an array. This function takes a starting value, list, and a block and runs the block once for each list element. Another example:<p><code>[1,2,3,4].inject(0) { |result,element| result + element } # => 10 </code><p/>
+				    </li>
+				    
+				    <li>
+				    	<em>Flexibility</em><!--Insert link to rubygems.org-->
+				    		-Parts of the Ruby programming structure can be easily altered or modified according to the programmer's desire. Libraries of ruby code known as gems act similar to Ebuilds and can be used to give specific ruby programs more capabilities. The process for installing a gem is easy as shown in this example: <code>gem install mygem</code>. Ruby also uses dynamic typing which allows variables and variable scopes to not need to be declared in Ruby ahead of runtime. The variable name determines the scope. 	
+				    </li>
+				    
+				</ul> <!--  learnyruby.com/about-ruby.html-->
+
+				<h3>Features</h3>
+				<ul class="vantagelist">
+					<li>
+				    	<em>Exception Handling</em>
+				    		-Similar to other programming languages such as Python and C++, Ruby error-handling tools which aid the user in assessing their code's performance.<!--Add this to Features List-->
+				    </li>
+				    <li>
+				    	<em>Object-Oriented Architecture</em>
+				    		-Ruby's setup includes inheritance, metaclasses, and mixins.
+				    </li>
+				    <li> <!--Include a picture??-->
+				    	<em>Interactive Shell</em>
+				    		-The ruby interactive shell allows programmers to code more conveniently by not having to switch tabs or windows in an IDE in order to test their programs.
+				    </li>
+				</ul>
+				
+				<h3>Shortcomings</h3>
+				<p>While Ruby has some very strong and efficient capabilities, there are a couple weaknesses to the language. Some of the strengths that Ruby has turn out to be double-sided swords which present problems.</p>
+				<ul class="weaknesslist">
+					<li><em>Scalability</em>
+						-In the words of James Gosling, the "Father of Java":
+						<blockquote cite="http://www.youtube.com/watch?v=uq25JnHrF14"> "Ruby trades scalability for simplicity. If you try to build something that has high transaction rates, Ruby doesn't scale very well. Ruby[...] is really good for building things quickly. There is no way to get scale without sacrificing simplicity."
+						</blockquote>
+					</li>
+					<li><em> Guinea Pig Status</em>
+						-Being a new technology, Ruby is still being tested and improved upon by members of the community. This means essentially that Ruby is constantly undergoing new changes which have varying levels of success. Additionally, features such as the garbage collector and the memory footprint are suboptimal but are being improved with time.
+					</li>
+					<li>
+						<em>Dynamic Typing</em>
+						-Dynamic typing doesn't require variables to be declared before being used. This slows down overall performance when compared with a programming language such as Java which uses static typing.
+					</li>
+					<li>
+						<em>Error Capture</em>
+						-Ruby's architecture is structured to catch program errors during runtime. Some of these errors could be corrected beforehand.
+					</li>
+					<li>
+						<em>Ruby Community</em>
+						-While Ruby's coders are enthusiastic about improving the language and fixing bugs, they have also fostered a cult-like stigma because of their seemingly fanatic devotion to Ruby. The community's defensiveness to criticisms about Ruby has made other experienced coders more hesitant about getting involved. 
+				</ul>
+				<h3>Conclusion</h3>	
+				<p>Ruby is a great programming language for beginning or advanced coders alike. Aside from the fact that the software is free, there are numerous free resources, including example projects and video tutorials which can help anyone get up to speed. Click <a id="rubylink" href="https://www.ruby-lang.org/en/">here</a> to get started.</p><!--Link to ruby download page NEED TO FIX THIS-->
+				
+			</section>	<!-- Mainbody div-->
+
+			<footer> <!--make this a section-->
+				&#169;2014, Joseph Burwasser.
+			</footer>
+			
+		</section>	<!--Content Div Should I remove border for final product??--> 
+	</body> <!--Quotation ""-->
+
+</html>
+
+<!--
+http://www.youtube.com/watch?v=uq25JnHrF14- ruby is not scalable like java
+google "cool ruby code examples, get the one from stack overflow"
+
+	-->

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Getting Started
+		</title>
+		<link rel=stylesheet type="text/css" href="css/style.css">
+	</head>
+	<body class="content main">
+		<div class="header">
+			<img class="hero" src="css/img/hero.jpg"/>
+			<h1 class="title">Getting Started</h1>
+			<div class="nav">
+				<ul>
+					<a href="Ruby.html"><li class="current">Ruby</li></a>
+					<a href="GettingStarted.html"><li>Getting Started</li></a>
+				</ul>
+			</div>
+		</div>
+		<section class="instruction center">
+			<h2>Verify that Ruby is Installed</h2>
+			<p>If you are running on Mac OS X right now (which you should be) then you are in luck because Ruby should already be installed! You can verify this by opening a terminal and entering the following command:
+				<code>ruby -v</code>
+			to see the current version of Ruby. If this doesn't work, or if you are running Windows, then follow instructions <a href="https://www.ruby-lang.org/en/downloads/">here</a> to get Ruby installed.
+		</section>
+		<section class="instruction center">
+			<h2>Get Comfortable with Interactive Ruby</h2>
+			<p>Ruby ships with something called the IRB (Interactive Ruby), which allows you to write and execute Ruby code in real time! This is an easy way to try Ruby out and see what happens with instant gratification. To start the IRB, open a terminal and enter <code>irb</code>. This should start an interactive session with Ruby and allow you to enter Ruby code and see the result. Try typing a simple command, such as <code>3 * 4</code>.</p>
+		</section>
+		<section class="instruction center">
+			<h2>Define a Method to Greet the World</h2>
+			<p>You can even define classes and methods in the IRB. Methods are defined in Ruby with <code>def method_name</code>, followed by the method body, and ended with <code>end</code>. Enter the following, line by line, into the IRB:</p>
+			<pre>
+				<code>
+					def hi
+						puts "Hello World"
+					end
+				</code>
+			</pre>
+			<p>Now you can say "Hello World" by simply referencing this method. Go ahead, tell the world hello.</p>
+		</section>
+		<section class="instruction center">
+			<h2>Define a Better Method</h2>
+			<p>Maybe you want to be able to say hello to more specific people than just the world though? Let's just redefine our <code>hi</code> method to accept a name as a parameter. That's the great thing about Ruby, it's flexible enough that you can redefine methods whenever you want (you can even redefine methods from core classes, such as writing your own String.puts method).</p>
+			<pre>
+				<code>
+					def hi(name="World")
+						puts "Hello #{name.capitalize}"
+					end
+				</code>
+			</pre>
+			<p>Now your method takes an optional parameter that will be used in the greeting. Go ahead and say hello to a friend with <code>hi("friend")</code> or <code>hi "friend"</code>.</p>
+		</section>
+		<section class="instruction center">
+			<h2>Continue Learning</h2>
+			<p>You've been introduced to the IRB, but there is still a lot to learn in Ruby to become a truly productive developer. Continue learning at the <a href="https://www.ruby-lang.org/en/documentation/quickstart/2/">Ruby website</a> to learn about classes and more.</p>
+		</section>
+
+	</body>
+</html>

@@ -1,0 +1,139 @@
+/* ==============================
+ * CSS Project for Mobile Fortress
+ * Copyright 2014 Nathan Cooper
+ * written for - www.MobileFortress.com (not really)
+ * ==============================
+ */
+
+body { 
+  background: #dddddd url('/webapp/images/design_background.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background:;
+  margin: 0;
+}
+
+article {
+  border-radius:25px;
+  background:#ffffff;
+  padding: 5px 15px;
+}
+
+.scaling_img_50 {
+  width:50%;
+}
+
+.scaling_img_25 {
+  width:25%;
+  min-width:100px;
+}
+
+#content-body {
+  width:80%;
+  max-width: 800px;
+  padding:20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.line-break {
+  width:90%;
+  height:2px;
+  background:darkgray;
+}
+
+.right {
+  float: right;
+}
+
+.code {
+  border: solid 2px;
+  border-radius:5px;
+  background:#ffffff;
+  padding: 4px;
+}
+
+header, footer {
+  width: 100%;
+  position: fixed;
+}
+
+header{
+  top: 0px;
+  height: 18px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+header ul{
+  list-style-type: none;
+  height: 100%;
+  padding: 0;
+  margin: auto;
+  max-width: 750px;
+  width: 75%;
+  font-size: 0.8em;
+}
+
+header li a {
+  float: left;
+  display: block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  border-width: 1px;
+  border-color: #ffe #aaab9c #ccc #fff;
+  border-style: solid;
+  color: #777;
+  text-decoration: none;
+  background: #f7f2ea;
+  text-align: center;
+}
+
+header li.active a {
+  background: #f0e7d7;
+  color: #800000;
+}
+
+header li:first-child a {
+  border-bottom-left-radius:30px;
+}
+
+header li:last-child a {
+  border-bottom-right-radius:30px;
+}
+
+footer {
+  height: 20px;
+  background: #eeeeee;
+  opacity: 0.5;
+  bottom: 0;
+}
+
+footer img {
+  height: 100%;
+  float: right;
+  margin-right: 5px;
+}
+
+/* Title */
+data-title h1 {
+  font-size: 34pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Subtitle */
+data-title h2 {
+  font-size: 12pt;
+  margin-top: 0px;
+}
+
+#content-body article h3 {
+  font-variant: small-caps;
+  text-align: center;
+  font-size: 14px;
+}
+

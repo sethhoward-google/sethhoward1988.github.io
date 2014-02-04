@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic page info -->
+		<title>HTML5 Introduction</title>
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
+		<meta charset="UTF-8">
+		<meta name="description" content="This Website was constructed as a part of the Brigham Young University Information Systems Department, for course IS 542.  The site explains the concepts and current best practices underlying HTML5 and CSS3, and emphasizes their role in Responsive Web Design.">
+		<meta name="author" content="Roy Matsunaga">
+		<meta name="keywords" content="HTML, HTML5, Web Design, Web Development">
+	</head>
+	<body>
+		<div class="body">
+			<header>
+				<div class="header-logo">
+					<img src="img/header-logo.jpg">
+				</div>
+				<nav>
+					<ul class="nav">
+						<!-- highlight the home nav item -->
+						<li class="nav-home">
+							<a href="index.html">Home</a>
+						</li>
+						<!-- menu item for RWD section -->
+						<li>
+							<a class="dropdown-header" href="#">RWD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="rwd-introduction.html">Introduction</a>
+								</li>
+							</ul>
+						</li>
+						<!-- dropdown menu for html5 section -->
+						<li class="dropdown">
+							<a class="dropdown-header" href="#">HTML5</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="html5-introduction.html">Introduction</a>
+								</li>
+								<li>
+									<a href="html5-features.html">Features</a>
+								</li>
+							</ul>
+						</li>
+						<!-- dropdown menu for css3 section -->
+						<li class="dropdown">
+							<a class="dropdown-header" href="#">CSS3</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="css3-introduction.html">Introduction</a>
+								</li>
+								<li>
+									<a href="css3-features.html">Features</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- main page content -->
+			<div class="content">
+				<img class="top-image" src="img/html-introduction.png">
+				<!-- History of HTML -->
+				<h1>History of Hypertext Markup Language (HTML)</h1>
+				<h2>The World Wide Web</h2>
+				<p>The World Wide Web, or WWW, is simply a system of interconnected/linked documents that are accessible through the Internet.  Web browsers, such as Google Chrome, Apple's Safari, Opera, Mozilla Firefox, and Microsoft's Internet Explorer, allow people like you and me to request and view documents available on the World Wide Web.</p>
+				<p>Ok, that sounds great, but how does the WWW do that?  How does it know where pages are?  How does it link them together?  How does it do all the fancy styling so that pages look nice when I see them?  This is where HTML comes in.  Hypertext Markup Language organizes, defines, and links information and documents together, and is a language that your Web browser can understand and render.</p>
+				<h2>Early Versions of HTML</h2>
+				<p>HTML was specified by Tim Berners-Lee, who, in 1980, proposed a system of interconnected documents built on the Internet.  This original specification was proposed and created for researchers in the European Organization for Nuclear Research (CERN).  The first document on the Internet about HTML was by Tim Berners-Lee, entitled "HTML Tags," and described eighteen elements that composed HTML.  Click on the image below to see a neat infographic of the history of HTML.</p>
+				<!-- Put this infographic in a lightbox of some kind -->
+				<img class="content-images" alt="The History of HTML" src="img/html-history-infographic.jpg" /> <!-- credit to Matt Silverman for this infographic, see http://mashable.com/2012/07/17/history-html5/ -->
+				<h2>Mobile Computing</h2>
+				<p>When HTML was created by Berners-Lee, it was intended for a very specific, limited audience.  Now, billions of people all over the world use the Internet.  In the early days of HTML, documents were served to and rendered on Web browsers found on desktop and laptop computers.  Now, billions of people all over the world access Web pages on thousands of different devices, including mobile phones and tablet computers.  For an excellent article on Responsive Web Design, visit <a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Responsive Web Design: What It Is and How To Use It</a>, by Kayla Knight (Smashing Magazine, 2011).</p>
+				<h2>HTML5</h2>
+				<p>The World Wide Web Consortium (W3) and the Web Hypertext Application Technology Working Group (WHATWG) developed HTML5 beginning in 2006.  According to the W3's site <a href="http://www.w3schools.com/html/html5_intro.asp">w3schools.com</a>, some basic rules for HTML5 included:</p>
+				<blockquote>
+				<ul>
+					<li>New features should be based on HTML, CSS, DOM, and JavaScript</li>
+					<li>The need for external plugins (like Flash) needs to be reduced</li>
+					<li>Error handling should be easier than in previous versions</li>
+					<li>Scripting has to be replaced by more markup</li>
+					<li>HTML5 should be device-independent</li>
+					<li>The development process should be visible to the public</li>
+				</ul>
+				</blockquote>
+				<p>HTML5 addresses many issues with previous versions of HTML, and the changing needs of Web browsing due to advancements in computing technology and form factor.  HTML5 provides a standardized recommendation for organizing/structuring Web pages, and includes various libraries which make RWD simpler, and which fully integrates CSS3 in order to create beautifully styled Web pages.</p>
+				<h3>Advantages over native appications</h3>
+				<p>Although native applications have several advantages over mobile sites, there are some key advantages to mobile websites created with HTML5 and CSS3:</p>
+				<ul>
+					<li>HTML5 mobile applications are less expensive to develop and deploy, since they are cross-platform.</li>
+					<li>HTML5, CSS3, and JavaScript are open source technologies</li>
+					<li>Mobile websites can reach a larger audience</li>
+				</ul>
+				<p>...to learn more about these new features, continue reading in the next section, HTML5 <a href="html5-features.html">Syntax</a>.</p>
+			</div>
+			<footer>
+				<div class="footer-content">
+					<div class="footer-section1">
+						<a href="index.html" class="logo">
+							<img alt="HTML5 and CSS3 "src="img/logo-footer.jpg">
+						</a>
+					</div>
+					<div class="footer-section2">
+						<p class="footer-copyright">Copyright 2013 by Roy Matsunaga.</p>
+					</div>
+				</div>
+			</footer>
+		</div>	
+	</body>
+</html>

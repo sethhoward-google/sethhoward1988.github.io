@@ -1,0 +1,32 @@
+tags, classes, and ids:
+
+html
+	head
+	body
+		div .body
+			header
+				img .header-logo
+				nav
+					ul .nav
+						li .nav-home
+						li .dropdown
+							a .dropdown-header
+							ul .dropdown-menu
+			div .content
+				img .top-image
+				h1
+				p #welcome
+				h2
+				h3
+				img .content-images
+			section #home-gallery
+				h1 #h1-gallery
+				ul .gallery
+					li .gallery-item
+						img .gallery-img
+	footer
+		div .footer-content
+			div .footer-section1
+				a .logo
+			div .footer-section2
+				p .footer-copyright

@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Introduction | WebRTC Project</title>
+        <meta name="description" content="About WebRTC">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/main.css">
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .navbar {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+    </head>
+    <body>
+
+        <header>
+            <div class="navbar">
+                <h1><a href="/">WebRTC Project</a></h1>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Me</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="content">
+            <h1>WebRTC</h1>
+            <div class="flipper">
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <img src="img/webrtc.png" alt="WebRTC Logo" class="hero-img">
+                    </div>
+                    <div class="flip-back">
+                        <p>&#128516; Because peer-to-peer audio, video, and data are awesome! &#128516;</p>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <h2>What is it?</h2>
+                <p>According to HTML5 Rocks, "Imagine a world where your phone, TV and computer could all communicate on a common platform. Imagine it was easy to add video chat and peer-to-peer data sharing to your web application. That's the vision of WebRTC."<a href="#footnote1" class="citation">[1]</a></p>
+                <p>WebRTC enables a user's browser to communicate with other browsers over voice, video, or data channels in a peer-to-peer fashion. The promise of WebRTC is that this functionality does not rely on plugins, native apps, or other downloads, and that communication channels operate in a peer-to-peer fashion. These P2P connections support encryption and bandwidth management.</p>
+                <p>As of this writing, Google Chrome, Firefox, Chrome for Android, Chrome OS, and (to some extent) Opera support various elements of WebRTC, with Chrome and Firefox having mostly complete support.</p>
+            </section>
+            <section>
+                <h2>Why is this important?</h2>
+                <p>Historically, RTC functionality has been extremely cumbersome, it has not been interoperable (Skype couldn't communicate with Google, for example), and it has been very expensive. Organizations and individuals that would benefit greatly from the functionality promised by RTC applications were left with high barriers to entry, costs, and frustration.</p>
+                <p>WebRTC enables a new generation of web applications that could not have existed even a few years ago. Business CRM software can include video or voice calling directly in the browser, reducing hardware costs for handsets in business. Consumers can reach out to sales representatives directly from a web page, and, if the predictions of WebRTC-based startup <a href="http://twelephone.com" target="_blank">Twelephone</a> are accurate, then someday we may even move away from impersonal, ephemeral phone numbers and, instead, start using usernames, email addresses, or Twitter handles to place and receive calls - a far more intuitive and modern approach than a random series of numbers and prefixes.</p>
+                <p>Another critical reason why WebRTC is very important is privacy and data integrity. WebRTC's P2P nature helps protect those communicating on the web from eavesdropping and interception. Whereas Skype is known to route calls through centralized hubs for processing and, potentially, interception, a WebRTC video or audio conferencing solution would not rely on central processing of any kind. Rather, streams of data, audio, and video would pass from user to user directly, and could be encrypted using various secure mechanisms. This is a boon for businesses, journalists, whistleblowers, and normal citizens trying to maintain their right to privacy.</p>
+            </section>
+            <section>
+                <h2>Show me more!</h2>
+                <p><code>getUserMedia()</code> is the primary mechanism for retrieving audio and video channels from the user's device. This function returns a stream object that includes video and audio tracks which can then be used to stream to peers, to the user's screen, or to another output like a file for recording.</p>
+                <p><code>RTCPeerConnection</code> provides a mechanism for peering with other browsers and setting up audio/video streaming between users.</p>
+                <p><code>RTCDataChannel</code> provides a peer-to-peer, generic data channel.</p>
+            </section>
+            <section>
+                <h2>Getting Started</h2>
+                <p>Although WebRTC is rather complicated, several services have cropped up enabling developers to quickly get WebRTC online. These services provide central signaling services for WebRTC, which are necessary to bridge peer-to-peer connections on the internet (although signaling services should not route the traffic, they serve to introduce two peers to each other that would otherwise be invisible online).</p>
+                <p>One such service is <a href="http://peerjs.com">Peer.JS</a>, which provides an abstraction and a signaling service for free for WebRTC applications. Peer.JS makes connecting to another peer as easy as <code>var conn = peer.connect('dest-peer-id');</code>. Very, very straightforward.</p>
+                <p>Another service is <a href="http://phono.com">Phono</a>, a JQuery plugin by Tropo (an API for VoIP communications) that focuses primarily on audio-based communication. Tropo is unique in that it also can bridge the gap between telephone networks and WebRTC, which is a very useful feature for applications planning on competing with existing, traditional telephone and voice infrastructure.</p>
+
+                
+            </section>
+            <section>
+                <h2>Examples</h2>
+                <ul>
+                    <li><a href="https://apprtc.appspot.com">AppRTC</a> demonstrates a simple video/audio conference that any number of users can join - like your own simplified Google+ Hangout!</li>
+                    <li><a href="http://wikigolf.herokuapp.com/">WikiGolf</a> has two purposes: to enable social Wikipedia Golf on the general internet, and to gather data for artificial intelligence research. WebRTC is used to establish peered connections between players.</li>
+                    <li><a href="http://cdn.peerjs.com/demo/chat.html">Advanced Chat/File Transfer</a> opens up the peer-to-peer chat and file transfer world. Users can communicate directly without a third-party service, and can even directly transfer files without using another service or sneakernet!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>References</h2>
+                <p>
+                    <ul>
+                        <li id="footnote1"><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">HTML5 Rocks - Getting Started with WebRTC</a></li>
+                        <li><a href="http://peerjs.com">PeerJS - Abstraction Library with great examples</a></li>
+                        <li><a href="https://www.webrtc-experiment.com">Other WebRTC examples, including screen sharing</a></li>
+                    </ul>
+                </p>
+            </section>
+        </div>
+
+        <footer class="content">
+            <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">WebRTC Project</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
+    </body>
+</html>

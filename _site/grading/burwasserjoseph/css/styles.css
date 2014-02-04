@@ -1,0 +1,237 @@
+body {
+    display: block;
+    margin: 0px;
+
+}
+header {
+    
+    width: 100%;
+    height: 160px;
+    background: #530000;
+
+}
+header h2 {
+    font-family: 'Gentium Book Basic', serif;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: white;
+}
+header img{
+    text-align:left;
+    height: 180px;
+    position:absolute;
+    margin-left: 50px;
+    box-shadow: 10px 10px 5px #000000;/*Change this **/
+}
+.content{
+    background-image: -webkit-linear-gradient(to bottom right, #F3E5AB 0%, #F5E4A2 100%);
+    background-image: -moz-linear-gradient(to bottom right, #F3E5AB 0%, #F5E4A2 100%);
+    background-image: -o-linear-gradient(to bottom right, #F3E5AB 0%, #F5E4A2 100%);
+    background-image: -ms-linear-gradient(to bottom right, #F3E5AB 0%, #F5E4A2 100%);
+    background-image: linear-gradient(to bottom right, #F3E5AB 0%, #F5E4A2 100%);
+    font-family: 'Gentium Book Basic', serif;
+}
+
+nav {
+    background: #530000;
+   padding-bottom: 5px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+nav li {
+    display: inline;
+    list-style: none; 
+    font-size: 25px;
+
+}
+nav a:link,a:visited
+{ 
+    margin-right: -4px;
+    width:120px;
+    font-weight:bold;
+
+    background: #ff3019; /* Old browsers */
+background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 50%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(50%,#cf0404)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 50%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ff3019 0%,#cf0404 50%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 50%); /* IE10+ */
+background: linear-gradient(to bottom, #ff3019 0%,#cf0404 50%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#000000;
+}
+nav a:hover,a:active
+{
+    background:#530000;
+    color:#ffffff;
+    transition: all 1s;
+}
+
+#railsIntroPhoto {
+    height: 100px;
+    text-align: center;
+}
+
+p #rubylink{
+    color:blue;
+    font-weight: bold;
+}
+
+.mainbody {
+    margin: 5px 15% 5px 15%;
+    min-height: 900px;
+    /*background:#ffffff;
+    **/
+}
+
+.vantagelist {
+    text-align: left;
+}
+
+ul.vantagelist li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+ul.weaknesslist li {
+    margin-bottom: 10px;
+}
+
+em {
+    font-weight: bold;
+    color: #530000;
+}
+#sumExample {
+    float:left;
+}
+
+.objectPar p{
+    margin-left: 240px;
+}
+
+.objectPar {
+    margin-bottom: 50px;
+}
+.examples img {
+
+margin-left: 28%;
+}
+
+h2 {
+    color: #C80002;
+}
+
+h3 {
+    color:#C80002;
+}
+.introd img{
+    margin-left: 40px;
+    margin-right: 5px;
+    height: 262px;
+    width: 176px;
+    /*176 x 262 original = 88 x 131 **/
+    /*trying to get "Everything is an object header aligned, unsuccessful"**/
+    position:absolute;
+    text-align: left;
+}
+
+.introd p, blockquote{
+    text-align: left;
+    margin-left: 240px;
+    
+}
+
+.introd blockquote {
+    font-style:italic
+}
+
+
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+   
+}
+
+.vantagelist code {
+    color:red;
+    text-align: right;
+}
+
+.vantagelist p {
+    margin-right: 15%;
+    text-align: right;
+}
+
+p {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.weaknesslist {
+    text-align: left;
+}
+
+ul.weaknesslist li{
+    list-style: none;
+}
+
+footer {
+    text-align: center;
+    min-height: 100px;
+    min-width: 100%;
+    padding-top: 50px;
+    color: white;
+    background: #530000;
+}
+
+
+
+ .block {
+    text-align: center;
+     width: 32%;
+     vertical-align: top;
+}
+
+.block img {
+    width: 80%;
+}
+
+.block ul {
+    padding: 0px 5px;
+}
+
+.block ul li {
+    list-style: none;
+    padding:10px 0px;
+}
+
+.content-right, .block {
+    display: inline-block;
+}
+
+
+
+/*Items might include:
+Animations and Transitions (as appropriate - 2D and 3D)
+Gradients - Good
+Selectors
+Box Model
+Box Shadows
+Border Images
+Media Queries
+Multiple Backgrounds
+CSS Columns - Good
+WebFonts (apply good Typography)
+Browser compatibility (Prefixr) -Good
+Margins and Padding**/
