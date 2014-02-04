@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Clock</title>
+        <link href='http://fonts.googleapis.com/css?family=Orbitron:500,400' rel='stylesheet' type='text/css'>
+        <link href='http://sethhoward1988.github.io/css/lecture4.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="clock_container"></div>
+        <script>
+            Utility = function () {}
+            Utility.prototype.bind = function (fn, context) {
+                return function () {
+                    fn.apply(context, arguments);
+                }
+            }
+            Utility.prototype.addClass = function (el, className) {
+                var classList = el.className;
+                classList += ' ' + className;
+                el.className = classList;
+            }
+
+            Utility.prototype.removeClass = function (el, className) {
+                var classList = el.className;
+                var classes = classList.split(' ');
+                var index = null;
+                for(var i = 0; i < classes.length; i++){
+                    if(classes[i] == className){
+                        index = i;
+                    }
+                }
+                if(index != null) {
+                    classes.splice(index, 1);
+                }
+                el.className = classes.join(' ');
+            }
+
+            var util = new Utility;
+
+
+            Clock = function () {
+                this.el = document.createElement('div');
+                this.running = false;
+                this.refresh = util.bind(this.refresh, this);
+            }
+            Clock.prototype = {
+
+                start: function () {
+                    this.running = true;
+                    this.refresh()
+                    util.addClass(this.el, 'active');
+                },
+
+                refresh: function () {
+                    if(this.running){
+                        var date = new Date;
+                        var hours = date.getHours();
+                        var minutes = date.getMinutes();
+                        var seconds = date.getSeconds();
+                        this.el.innerText = hours + ':' + minutes + ':' + seconds;
+                        setTimeout(this.refresh, 1);
+                    }
+                },
+
+                stop: function () {
+                    this.running = false;
+                    util.removeClass(this.el, 'active');
+                }
+
+            }
+
+            var clock = new Clock;
+
+            var container = document.getElementById('clock_container');
+            container.appendChild(clock.el);    
+            
+            setTimeout(function () {
+                clock.start();
+            }, 100);
+        </script>
+    </body>
+</html>
